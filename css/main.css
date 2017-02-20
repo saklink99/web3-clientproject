@@ -1,9 +1,60 @@
 @charset "UTF-8";
-/* CSS Document */
 
-/* CSS Best Practices.  Organized syntax.  Separate Conten from Style.  Use shorthand properties.  Use Classes instead of IDS. Don't overuse IDs.  Minimize CSS.  Use Table of contents of comments to separate sections. */
+/*
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ LARGE SCREEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+>>>>>> TABLE OF CONTENTS <<<<<<
+
+===========================================
+
+1.0 - TYPOGRAPHY
+
+1.1 - Headings
+1.2 - Body Copy
+1.3 - Buttons
+1.4 - Forms
+1.5 - Lists
+1.6 - Tables
+
+2.0 - NAVIGATION MENUS
+
+2.1 - Main
+2.2 - Sub
+2.3 - Footer
+
+3.0 - CONTENT
+3.1 - Site Structure
+3.2- Site Header
+3.3- Site Footer
+
+4.0 - MEDIA
+
+5.0 - UTILIY
+5.1 - Text Sizes
+5.2 - Colors
+5.3 - Alignments
+
+===========================================
+
+*/
+
+/* >>>>>> 1.0 TYPOGRAPHY <<<<<< */
+
+/* XXXXXX 1.1 Headings XXXXXX */
+/* XXXXXX 1.2 Body Copy XXXXXX */
+/* XXXXXX 1.3 Buttons XXXXXX */
+/* XXXXXX 1.4 Forms XXXXXX */
+/* XXXXXX 1.5 Lists XXXXXX */
+/* XXXXXX 1.6 Tables XXXXXX */
+
+/* >>>>>> 2.0 NAVIGATION MENUS <<<<<< */
+
+/* XXXXXX 2.1 Main XXXXXX */
+/* XXXXXX 2.2 Sub  XXXXXX */
+/* XXXXXX 2.3 Footer XXXXXX */
+
+/* >>>>>> 3.0 CONTENT <<<<<< */
+
+/* XXXXXX 3.1 Site Structure XXXXXX */
 
 *, *:after, *:before {
 	-moz-box-sizing: border-box;
@@ -14,8 +65,7 @@
 }
 
 .wrapper {
-	width: 65%; /* Get your original percentage as close to 1024px as possible */
-	background-color: #302F2F;
+	width: 85%;
 	margin: 0 auto;
 }
 
@@ -23,15 +73,6 @@
 	content: ""; /* You have to this for any pseudo element before/after */
 	display: table;
 	clear: both;
-}
-
-img {
-	max-width: 100%; /* Don't go over 1366 pixels for image width */
-}
-
-figcaption {
-	font-family: 'Avenir';
-	color: #fff;
 }
 
 [class*='col-'] { /* Targets any class that beings with col- */
@@ -44,22 +85,23 @@ figcaption {
 	padding-right: 0;
 }
 
-.blue {
-	background-color: #5f64c0;
-	height: 50px; /* 
-	
-	By default this will be 100% of its parent
-	
-	To apply a background color to a column you need to place a div within that column 
-	and apply the background color to that div inside so that a gap is created 
-	
-	*/
-}
+/* XXXXXX 3.2 Site Header XXXXXX */
+/* XXXXXX 3.3 Site Footer XXXXXX */
 
-.green {
-	background-color: #75E593;
-	height: 50px;
-}
+/* >>>>>> 4.0 MEDIA <<<<<< */
+
+/* >>>>>> 5.0 UTILITY <<<<<< (ONLY FOR CLASSES THAT ARE DOING ONE TASK) */
+
+/* XXXXXX 5.1 Text Sizes XXXXXX */
+/* XXXXXX 5.2 Colors XXXXXX */
+/* XXXXXX 5.3 Alignments XXXXXX */
+
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ LARGE SCREEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ONE COLUMN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -209,33 +251,5 @@ figcaption {
 
 }
 
-/* ^ Kind of acts like a hover state
-
-The media is causing the break point
-
-This is a very common break point
-
-iPhone: 320px wide
-Android: 420px wide
-Tablets: 768px wide
-
-On mobile .col-1-7 width needs to be 100%
-
-On mobile .col-1-8 width needs to be 25%, 50%
-
- */
- 
-/*
-
-@media (max-width: 420px) {
-	
-	.wrapper {
-		width: 95%;
-	}
-}
-
-Don't worry about this for now!
-
-*/ 
 
 
