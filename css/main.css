@@ -110,6 +110,8 @@ blockquote p {
 
 /* XXXXXX 3.1 Site Structure XXXXXX */
 
+
+
 /* Image Gallery */
 
 /* Slideshow container */
@@ -231,6 +233,12 @@ section {
 /* XXXXXX 3.3 Site Footer XXXXXX */
 
 /* >>>>>> 4.0 MEDIA <<<<<< */
+
+#map {
+    height: 200px;
+    margin-top: 100px;
+    width: 50%;
+}
 
 /* >>>>>> 5.0 UTILITY <<<<<< (ONLY FOR CLASSES THAT ARE DOING ONE TASK) */
 
