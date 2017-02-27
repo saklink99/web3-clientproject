@@ -48,6 +48,9 @@ font-family: 'Cormorant Garamond', serif;
 /* >>>>>> 1.0 TYPOGRAPHY <<<<<< */
 
 /* XXXXXX 1.1 Headings XXXXXX */
+h1 {
+	text-align: center;
+}
 h2 {
 	font-family:'Cormorant Garamond', serif; 
 	font-size: 43px;
@@ -80,6 +83,39 @@ blockquote p {
 	line-height: 43px;
 }
 
+ul {
+	list-style: none;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #86332C;
+}
+
+blockquote {
+	background-color: #f6f3f3;
+}
+
+
+/* UTILITY CLASSES */
+
+.bg-gray {
+	background-color: #f6f3f3;
+	height: 152px;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+.img-fullwidth {
+	width: 100%;
+}
 
 /* XXXXXX 1.2 Body Copy XXXXXX */
 /* XXXXXX 1.3 Buttons XXXXXX */
@@ -91,11 +127,57 @@ blockquote p {
 
 /* XXXXXX 2.1 Main XXXXXX */
 
-.main-nav {
+
+
+.main-nav > ul {
 	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
+footer > .col-1-5, .col-3-5 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	display: inline-block;
+}
+
+footer ul li, #social-nav {
+	display: inline; /*fix font awesome li */
+}
+
+footer ul li {
+	font-family: 'Gibson', sans-serif;
+	font-size: 16px;
+	font-weight: 100;
+	letter-spacing: .01px;
+	text-transform: uppercase;
+}
+
+footer .col-1-5 > p {
+	font-family: 'Gibson', sans-serif;
+	font-size: 16px;
+	font-weight: 100;
+	letter-spacing: .01px;
+}
+
+footer h5 {
+	font-family: 'Gibson', sans-serif;
+	font-size: 16px;
+	color: #7d494b;
+	font-weight: 100;
+	letter-spacing: .01px;
+	text-transform: uppercase;
+}
+
+
+
 .mobile-nav, .mobile-btn-wrapper {
+	display: none;
+}
+
+.tablet-logo {
 	display: none;
 }
 
@@ -110,7 +192,10 @@ blockquote p {
 
 /* XXXXXX 3.1 Site Structure XXXXXX */
 
-
+.flex {
+	display: flex;
+	justify-content: space-around;
+}
 
 /* Image Gallery */
 
@@ -180,19 +265,6 @@ blockquote p {
 }
 
 
-}
-.bg-gray {
-	background-color: #f6f3f3;
-	height: 152px;
-	width: 100%;
-	z-index: -1;
-	position: absolute;
-	top: 50px;
-	left: 50px;
-}
-
-blockquote {
-	background-color: #f6f3f3;
 }
 
 	
@@ -375,16 +447,30 @@ section {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SMALLER SCREEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+
+@media (max-width: 850px) {
+
+	.desktop-logo {
+		display: none;
+	}
+	.tablet-logo {
+		display: flex;
+		justify-content: center;
+
+	}
+}
+
+
 @media (max-width: 480px) {
 
-.mobile-btn-wrapper {
-	display: flex;
-	justify-content: flex-end;
-}
+	.mobile-btn-wrapper {
+		display: flex;
+		justify-content: flex-end;
+	}
 
-.main-nav {
-	display: none;
-}
+	.main-nav {
+		display: none;
+	}
 	
 
 }

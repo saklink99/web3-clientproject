@@ -21,33 +21,46 @@
   <div class="wrapper">
     <nav class="mobile-nav">
       <ul>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="http://www.chefauchef.com/" target='_blank'>ChefauChef</a></li>
       </ul>
     </nav>
     <div class="mobile-btn-wrapper"><!-- Look up styling for hamburger menus -->
       <a href="#" class="mobile-nav-btn"><i class="fa fa-bars" aria-hidden="true"></i></a>
     </div>
+
     <header>
-      <h1><a href="#"><img src="img/logo.png" alt="Talon Room"></a></h1>
+      <div class="tablet-logo">
+          <a href="#">
+            <img src="img/logo.png" alt="Talon Room">
+            <h1>Talon Room</h1>
+          </a>
+        </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li class="desktop-logo">
+            <a href="#">
+              <img src="img/logo.png" alt="Talon Room">
+              <h1>Talon Room</h1>
+            </a>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="http://www.chefauchef.com/" target='_blank'>ChefauChef</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="http://www.chefauchef.com/" target='_blank'>ChefauChef</a></li>
-      </ul>
-    </nav>
+    
     
     <section>
       <div class="bg-gray"></div>
       <div class="row">
         <div class="col-1-2">
-          <img src="img/home-img-01.jpg" alt="Couple Dancing">
+          <img class="img-fullwidth" src="img/home-img-01.jpg" alt="Couple Dancing">
           <img src="img/home-img-02.png" alt="logo stamp">
         </div>
         <div class="col-1-2">
@@ -95,19 +108,19 @@
 
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img src="img/home-img-03.jpg" style="width:100%">
+    <img src="img/carousel-01.jpg" style="width:100%">
     <div class="text">Caption Text</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="img/home-img-03.jpg" style="width:100%">
+    <img src="img/carousel-02.jpg" style="width:100%">
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="img/home-img-03.jpg" style="width:100%">
+    <img src="img/carousel-03.jpg" style="width:100%">
     <div class="text">Caption Three</div>
   </div>
 
@@ -141,6 +154,8 @@
       setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
   </script>
+
+
   <footer class="wrapper">
     <div class="col-1-5">
       <h4><a href="#"><img src="img/logo.png" alt="Talon Room"></a></h4>
@@ -149,7 +164,7 @@
     </div>
     <div class="col-3-5">
       <nav>
-        <ul>
+        <ul class="flex">
         <li><a href="#">Events</a></li>
         <li><a href="#">Calendar</a></li>
         <li><a href="#">Contact</a></li>
