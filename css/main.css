@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-/*  USE THESE AS REFERENCES :)
-
-font-family: 'Gibson', sans-serif;
-font-family: 'Cormorant Garamond', serif; 
-
-*/
-
-
 /*
 
 >>>>>> TABLE OF CONTENTS <<<<<<
@@ -47,10 +39,30 @@ font-family: 'Cormorant Garamond', serif;
 
 /* >>>>>> 1.0 TYPOGRAPHY <<<<<< */
 
-/* XXXXXX 1.1 Headings XXXXXX */
-h1 {
-	text-align: center;
+footer .col-1-5 p:first-of-type, footer .col-1-5 p:nth-of-type(2) {
+	font-size: 0.85rem;
+	padding: 0;
+	margin: 0;
 }
+
+footer h4, footer h4 ~ p {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* XXXXXX 1.1 Headings XXXXXX */
+
+h1 {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+	font-size: 2rem;
+	color: #86332C;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.25rem;
+	margin: 0;
+}
+
 h2 {
 	font-family:'Cormorant Garamond', serif; 
 	font-size: 43px;
@@ -68,11 +80,28 @@ h3 {
 	line-height: 33px;
 }
 
+/* XXXXXX 1.2 Body Copy XXXXXX */
+
+h1 ~ p {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align: center;
+	font-size: 1rem;;
+	font-weight: 100;
+	color: #000;
+	text-transform: uppercase;
+	letter-spacing: 0.25rem;
+	margin: 5px;
+}
+
 p {
 	font-family: 'Gibson', sans-serif;
 	font-size: 21px;
 	font-weight: 100;
 	letter-spacing: 1.05px;	
+}
+
+blockquote {
+	background-color: #f6f3f3;
 }
 
 blockquote p {
@@ -83,9 +112,23 @@ blockquote p {
 	line-height: 43px;
 }
 
-ul {
-	list-style: none;
+footer .col-1-5:first-of-type h4 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.15rem;
+	color: #86332C;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+	margin: 0;
 }
+
+footer p:first-of-type {
+	font-size: 0.85rem;
+	margin: 0;
+}
+
+
+/* XXXXXX 1.3 Buttons XXXXXX */
 
 a {
 	color: black;
@@ -96,51 +139,11 @@ a:hover {
 	color: #86332C;
 }
 
-blockquote {
-	background-color: #f6f3f3;
-}
-
-
-/* UTILITY CLASSES */
-
-.bg-gray {
-	background-color: #f6f3f3;
-	height: 152px;
-	width: 100%;
-	z-index: -1;
-	position: absolute;
-	top: 50px;
-	left: 50px;
-}
-
-.img-fullwidth {
-	width: 100%;
-}
-
-/* XXXXXX 1.2 Body Copy XXXXXX */
-/* XXXXXX 1.3 Buttons XXXXXX */
 /* XXXXXX 1.4 Forms XXXXXX */
 /* XXXXXX 1.5 Lists XXXXXX */
-/* XXXXXX 1.6 Tables XXXXXX */
 
-/* >>>>>> 2.0 NAVIGATION MENUS <<<<<< */
-
-/* XXXXXX 2.1 Main XXXXXX */
-
-
-
-.main-nav > ul {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-
-footer > .col-1-5, .col-3-5 {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-
-	display: inline-block;
+ul {
+	list-style: none;
 }
 
 footer ul li, #social-nav {
@@ -153,6 +156,29 @@ footer ul li {
 	font-weight: 100;
 	letter-spacing: .01px;
 	text-transform: uppercase;
+}
+
+/* XXXXXX 1.6 Tables XXXXXX */
+
+/* >>>>>> 2.0 NAVIGATION MENUS <<<<<< */
+
+/* XXXXXX 2.1 Main XXXXXX */
+
+.main-nav > ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	font-family: 'Gibson', sans-serif;
+	text-transform: uppercase;
+}
+
+footer > .col-1-5, .col-3-5 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	display: inline-block;
 }
 
 footer .col-1-5 > p {
@@ -171,7 +197,17 @@ footer h5 {
 	text-transform: uppercase;
 }
 
+/* XXXXXX 2.2 Sub  XXXXXX */
+/* XXXXXX 2.3 Footer XXXXXX */
 
+/* >>>>>> 3.0 CONTENT <<<<<< */
+
+/* XXXXXX 3.1 Site Structure XXXXXX */
+
+.flex {
+	display: flex;
+	justify-content: space-around;
+}
 
 .mobile-nav, .mobile-btn-wrapper {
 	display: none;
@@ -185,89 +221,11 @@ footer h5 {
 	display: none;
 }
 
-/* XXXXXX 2.2 Sub  XXXXXX */
-/* XXXXXX 2.3 Footer XXXXXX */
-
-/* >>>>>> 3.0 CONTENT <<<<<< */
-
-/* XXXXXX 3.1 Site Structure XXXXXX */
-
-.flex {
-	display: flex;
-	justify-content: space-around;
+.wrapper {
+	width: 85%;
+	margin: 0 auto;
 }
 
-/* Image Gallery */
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
-
-
-}
-
-	
 section {
 	position: relative;
 }
@@ -278,11 +236,6 @@ section {
 	-o-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-}
-
-.wrapper {
-	width: 85%;
-	margin: 0 auto;
 }
 
 .row:after {
@@ -301,8 +254,84 @@ section {
 	padding-right: 0;
 }
 
+/* IMAGE GALLERY */
+
+/* SLIDESHOW CONTAINER */
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* CAPTION TEXT */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* NUMBER TEXT (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* DOTS/BULLETS INDICATOR */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* FADING ANIMATION */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* ON SMALLER SCREENS, DESCREASE TEXT SIZE */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+}
+
+/* END IMAGE GALLERY */
+
 /* XXXXXX 3.2 Site Header XXXXXX */
 /* XXXXXX 3.3 Site Footer XXXXXX */
+
+.footer-logo {
+	text-align: center;
+}
 
 /* >>>>>> 4.0 MEDIA <<<<<< */
 
@@ -312,7 +341,31 @@ section {
     width: 50%;
 }
 
+.logo {
+	width: 80px;
+	margin-bottom: 0.75rem;
+}
+
+footer .logo {
+	width: 50px;
+	margin-bottom: 0.75rem;
+}
+
 /* >>>>>> 5.0 UTILITY <<<<<< (ONLY FOR CLASSES THAT ARE DOING ONE TASK) */
+
+.bg-gray {
+	background-color: #f6f3f3;
+	height: 152px;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+.img-fullwidth {
+	width: 100%;
+}
 
 /* XXXXXX 5.1 Text Sizes XXXXXX */
 /* XXXXXX 5.2 Colors XXXXXX */
@@ -320,9 +373,7 @@ section {
 
 
 
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ LARGE SCREEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ONE COLUMN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -445,7 +496,7 @@ section {
 	width: 91.67%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SMALLER SCREEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TABLET SIZE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 @media (max-width: 850px) {
@@ -459,6 +510,8 @@ section {
 
 	}
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MOBILE SIZE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 @media (max-width: 480px) {

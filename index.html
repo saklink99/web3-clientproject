@@ -6,6 +6,7 @@
 <script src="https://use.typekit.net/vca8cgb.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Talon Room</title>
@@ -34,8 +35,9 @@
     <header>
       <div class="tablet-logo">
           <a href="#">
-            <img src="img/logo.png" alt="Talon Room">
+            <img src="img/logo.svg" alt="Talon Room">
             <h1>Talon Room</h1>
+            <p>By ChefauChef</p>
           </a>
         </div>
       <nav class="main-nav">
@@ -44,8 +46,9 @@
           <li><a href="calendar.html">Calendar</a></li>
           <li class="desktop-logo">
             <a href="#">
-              <img src="img/logo.png" alt="Talon Room">
+              <img src="img/logo.svg" alt="Talon Room" class="logo">
               <h1>Talon Room</h1>
+              <p>By ChefauChef</p>
             </a>
           </li>
           <li><a href="contact.html">Contact</a></li>
@@ -155,10 +158,13 @@
   }
   </script>
 
-
   <footer class="wrapper">
     <div class="col-1-5">
-      <h4><a href="#"><img src="img/logo.png" alt="Talon Room"></a></h4>
+      <a href="#">
+        <div class="footer-logo"><img src="img/logo.svg" alt="Talon Room" class="logo"></div>
+        <h4>Talon Room</h4>
+        <p>By ChefauChef</p>
+      </a>
       <p>230 North 12th Street</p>
       <p>Lincoln, NE 68508</p>
     </div>
@@ -172,10 +178,12 @@
         </ul>
       </nav>
       <div class="social-nav">
-        <li><a href="http://www.facebook.com/" target='_blank'><i class="fa fa-facebook-official" aria-hidden="true"></i>
-</a></li>
-        <li><a href="http://www.instagram.com/" target='_blank'><i class="fa fa-instagram" aria-hidden="true"></i>
-</a></li>  <!--come back to this and figure out how to code the social media stuff & also link to talon room's actual pages-->
+        <ul class="flex">
+          <li><a href="http://www.facebook.com/" target='_blank'><i class="fa fa-facebook-official" aria-hidden="true"></i>
+  </a></li>
+          <li><a href="http://www.instagram.com/" target='_blank'><i class="fa fa-instagram" aria-hidden="true"></i>
+  </a></li>  <!--come back to this and figure out how to code the social media stuff & also link to talon room's actual pages-->
+        </ul>
       </div>
     </div>
     <div class="col-1-5">
