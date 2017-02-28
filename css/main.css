@@ -1,57 +1,26 @@
 @charset "UTF-8";
 
-/*
-
->>>>>> TABLE OF CONTENTS <<<<<<
-
-===========================================
-
-1.0 - TYPOGRAPHY
-
-1.1 - Headings
-1.2 - Body Copy
-1.3 - Buttons
-1.4 - Forms
-1.5 - Lists
-1.6 - Tables
-
-2.0 - NAVIGATION MENUS
-
-2.1 - Main
-2.2 - Sub
-2.3 - Footer
-
-3.0 - CONTENT
-3.1 - Site Structure
-3.2- Site Header
-3.3- Site Footer
-
-4.0 - MEDIA
-
-5.0 - UTILIY
-5.1 - Text Sizes
-5.2 - Colors
-5.3 - Alignments
-
-===========================================
-
-*/
-
-/* >>>>>> 1.0 TYPOGRAPHY <<<<<< */
-
-footer .col-1-5 p:first-of-type, footer .col-1-5 p:nth-of-type(2) {
-	font-size: 0.85rem;
-	padding: 0;
-	margin: 0;
+/* BASE STYLES */
+*, *:after, *:before {
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-footer h4, footer h4 ~ p {
-	text-align: center;
-	text-transform: uppercase;
+.wrapper {
+	width: 85%;
+	margin: 0 auto;
 }
 
-/* XXXXXX 1.1 Headings XXXXXX */
+section {
+	position: relative;
+}
 
+
+
+/* XXXXXX TYPOGRAPHY XXXXXX */
 h1 {
 	font-family: 'Josefin Sans', sans-serif;
 	text-align: center;
@@ -65,10 +34,12 @@ h1 {
 
 h2 {
 	font-family:'Cormorant Garamond', serif; 
-	font-size: 43px;
+	font-size: 2rem;
 	font-weight: 400;
 	letter-spacing: 2.1px;
+	text-align: center;
 	color: #86332C;
+	padding-top: 2rem;
 }
 
 h3 {
@@ -80,7 +51,33 @@ h3 {
 	line-height: 33px;
 }
 
-/* XXXXXX 1.2 Body Copy XXXXXX */
+p {
+	font-family: 'Gibson', sans-serif;
+	font-size: 1.15rem;
+	font-weight: 100;
+	letter-spacing: 1.05px;
+	padding: 0px 3.5rem;
+	line-height: 31px;	
+}
+
+blockquote {
+	background-color: #f6f3f3;
+	font-family: 'Cormorant Garamond', serif; 
+	font-size: 44px;
+	font-weight: 300;
+	letter-spacing: 0.73px;
+	line-height: 43px;
+}
+
+.nav-links {
+	text-align: center;
+	font-family: 'Cormorant Garamond', serif;
+	text-transform: uppercase;
+}
+
+ul {
+	list-style: none;
+}
 
 h1 ~ p {
 	font-family: 'Josefin Sans', sans-serif;
@@ -93,42 +90,9 @@ h1 ~ p {
 	margin: 5px;
 }
 
-p {
-	font-family: 'Gibson', sans-serif;
-	font-size: 21px;
-	font-weight: 100;
-	letter-spacing: 1.05px;	
-}
-
-blockquote {
-	background-color: #f6f3f3;
-}
-
-blockquote p {
-	font-family: 'Cormorant Garamond', serif; 
-	font-size: 44px;
-	font-weight: 300;
-	letter-spacing: 0.73px;
-	line-height: 43px;
-}
-
-footer .col-1-5:first-of-type h4 {
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 1.15rem;
-	color: #86332C;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.15rem;
-	margin: 0;
-}
-
-footer p:first-of-type {
-	font-size: 0.85rem;
-	margin: 0;
-}
 
 
-/* XXXXXX 1.3 Buttons XXXXXX */
+/* XXXXXX BUTTONS XXXXXX */
 
 a {
 	color: black;
@@ -136,20 +100,80 @@ a {
 }
 
 a:hover {
-	color: #86332C;
+	border-bottom: 0.5px solid #000;
 }
 
-/* XXXXXX 1.4 Forms XXXXXX */
-/* XXXXXX 1.5 Lists XXXXXX */
-
-ul {
-	list-style: none;
+.desktop-logo a:hover {
+	border-bottom: none;
 }
 
-footer ul li, #social-nav {
-	display: inline; /*fix font awesome li */
+
+/* >>>>>> 5.0 UTILITY <<<<<< (ONLY FOR CLASSES THAT ARE DOING ONE TASK) */
+
+.bg-gray {
+	background-color: #f6f3f3;
+	height: 190px;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+	top: 37%;
+	left: 0;
 }
 
+.img-fullwidth {
+	width: 100%;
+}
+
+.flex {
+	display: flex;
+}
+
+.width-1-5 {
+	width: 20%;
+}
+
+.width-3-5 {
+	width: 60%;
+}
+
+header {
+	margin-bottom: 5rem;
+}
+
+
+
+
+/* XXXXXX 3.2 Site Header XXXXXX */
+.logo {
+	width: 80px;
+	margin-bottom: 0.75rem;
+}
+
+.main-nav > ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mobile-nav, .mobile-btn-wrapper {
+	display: none;
+}
+
+.tablet-logo {
+	display: none;
+}
+
+.mobile-btn-wrapper {
+	display: none;
+}
+
+
+
+/* MAIN */
+
+
+
+/* XXXXXX 3.3 Site Footer XXXXXX */
 footer ul li {
 	font-family: 'Gibson', sans-serif;
 	font-size: 16px;
@@ -158,30 +182,12 @@ footer ul li {
 	text-transform: uppercase;
 }
 
-/* XXXXXX 1.6 Tables XXXXXX */
-
-/* >>>>>> 2.0 NAVIGATION MENUS <<<<<< */
-
-/* XXXXXX 2.1 Main XXXXXX */
-
-.main-nav > ul {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	text-align: center;
-	font-family: 'Gibson', sans-serif;
-	text-transform: uppercase;
+.footer-logo {
+	width: 50px;
+	margin-bottom: 0.75rem;
 }
 
-footer > .col-1-5, .col-3-5 {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-
-	display: inline-block;
-}
-
-footer .col-1-5 > p {
+footer p {
 	font-family: 'Gibson', sans-serif;
 	font-size: 16px;
 	font-weight: 100;
@@ -197,74 +203,31 @@ footer h5 {
 	text-transform: uppercase;
 }
 
-/* XXXXXX 2.2 Sub  XXXXXX */
-/* XXXXXX 2.3 Footer XXXXXX */
-
-/* >>>>>> 3.0 CONTENT <<<<<< */
-
-/* XXXXXX 3.1 Site Structure XXXXXX */
-
-.flex {
-	display: flex;
+footer ul {
 	justify-content: space-around;
 }
 
-.mobile-nav, .mobile-btn-wrapper {
-	display: none;
+
+
+
+
+/* >>>>>> CONTACT <<<<<< */
+#map {
+    height: 200px;
+    margin-top: 100px;
+    width: 50%;
 }
 
-.tablet-logo {
-	display: none;
-}
 
-.mobile-btn-wrapper {
-	display: none;
-}
 
-.wrapper {
-	width: 85%;
-	margin: 0 auto;
-}
-
-section {
-	position: relative;
-}
-
-*, *:after, *:before {
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.row:after {
-	content: ""; /* You have to this for any pseudo element before/after */
-	display: table;
-	clear: both;
-}
-
-[class*='col-'] { /* Targets any class that beings with col- */
-	float: left;
-	padding-right: 20px; /* Using pixels because we never want the gutter to change size */
-	margin-bottom: 20px;
-}
-
-[class*='col-']:last-of-type {
-	padding-right: 0;
-}
-
-/* IMAGE GALLERY */
 
 /* SLIDESHOW CONTAINER */
-
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* CAPTION TEXT */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -275,7 +238,6 @@ section {
   text-align: center;
 }
 
-/* NUMBER TEXT (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -284,7 +246,6 @@ section {
   top: 0;
 }
 
-/* DOTS/BULLETS INDICATOR */
 .dot {
   height: 13px;
   width: 13px;
@@ -299,7 +260,6 @@ section {
   background-color: #717171;
 }
 
-/* FADING ANIMATION */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -322,61 +282,25 @@ section {
   .text {font-size: 11px}
 }
 
+
+
+/*COLUMNS */
+
+[class*='col-'] { /* Targets any class that beings with col- */
+	float: left;
+	padding-right: 20px; /* Using pixels because we never want the gutter to change size */
+	margin-bottom: 20px;
 }
 
-/* END IMAGE GALLERY */
-
-/* XXXXXX 3.2 Site Header XXXXXX */
-/* XXXXXX 3.3 Site Footer XXXXXX */
-
-.footer-logo {
-	text-align: center;
+.row:after {
+	content: ""; /* You have to this for any pseudo element before/after */
+	display: table;
+	clear: both;
 }
 
-/* >>>>>> 4.0 MEDIA <<<<<< */
-
-#map {
-    height: 200px;
-    margin-top: 100px;
-    width: 50%;
+[class*='col-']:last-of-type {
+	padding-right: 0;
 }
-
-.logo {
-	width: 80px;
-	margin-bottom: 0.75rem;
-}
-
-footer .logo {
-	width: 50px;
-	margin-bottom: 0.75rem;
-}
-
-/* >>>>>> 5.0 UTILITY <<<<<< (ONLY FOR CLASSES THAT ARE DOING ONE TASK) */
-
-.bg-gray {
-	background-color: #f6f3f3;
-	height: 152px;
-	width: 100%;
-	z-index: -1;
-	position: absolute;
-	top: 50px;
-	left: 50px;
-}
-
-.img-fullwidth {
-	width: 100%;
-}
-
-/* XXXXXX 5.1 Text Sizes XXXXXX */
-/* XXXXXX 5.2 Colors XXXXXX */
-/* XXXXXX 5.3 Alignments XXXXXX */
-
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ LARGE SCREEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ONE COLUMN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .col-1-1 {
 	width: 100%;
