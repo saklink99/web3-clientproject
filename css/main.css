@@ -38,12 +38,14 @@ h1 {
 
 h2 {
 	font-family:'Cormorant Garamond', serif; 
-	font-size: 2rem;
+	font-size: 2.75rem;
 	font-weight: 400;
 	letter-spacing: 2.1px;
 	text-align: center;
 	color: #86332C;
-	padding-top: 2rem;
+	padding: 8rem 3rem 3rem;
+	margin-left: -5rem;
+}
 }
 
 h3 {
@@ -60,7 +62,7 @@ p {
 	font-size: 1.15rem;
 	font-weight: 100;
 	letter-spacing: 1.05px;
-	line-height: 31px;
+	line-height: 39px;
 	padding-left: 5rem;
 	padding-right: 6rem;
 }
@@ -132,12 +134,13 @@ h1 ~ p {
 	width: 100%;
 	z-index: -1;
 	position: absolute;
-	top: 37%;
+	top: 68%;
 	left: 0;
 }
 
 .img-fullwidth {
-	width: 100%;
+	width: 75%;
+	min-width: 450px;
 }
 
 .flex {
@@ -156,6 +159,20 @@ h1 ~ p {
 	text-align: center;
 }
 
+.relative {
+	position: relative;
+}
+
+
+/* XXXXXX IDS XXXXXX */
+
+#home-stamp {
+	min-width: 200px;
+	width: 35%;
+	position: absolute;
+	top: 61%;
+    left: 63%;
+}
 
 
 /* XXXXXX SITE HEADER XXXXXX */
@@ -278,11 +295,6 @@ footer ul {
 }
 
 /* ON SMALLER SCREENS, DESCREASE TEXT SIZE */
-
-
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
 
 
 
@@ -450,7 +462,24 @@ footer ul {
 	.main-nav {
 		display: none;
 	}
+
+	.wrapper {
+		width:100%;
+	}
 	
+	img {
+		margin: 0;
+	}
+
+	h2 {
+		padding: 0;
+	}
+
+	.col-1-2 {
+		width: 100%;
+		padding: 0;
+	}
+
 
 }
 
