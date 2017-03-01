@@ -18,6 +18,10 @@ section {
 	position: relative;
 }
 
+header {
+	margin-bottom: 5rem;
+}
+
 
 
 /* XXXXXX TYPOGRAPHY XXXXXX */
@@ -56,8 +60,9 @@ p {
 	font-size: 1.15rem;
 	font-weight: 100;
 	letter-spacing: 1.05px;
-	padding: 0px 3.5rem;
-	line-height: 31px;	
+	line-height: 31px;
+	padding-left: 5rem;
+	padding-right: 6rem;
 }
 
 blockquote {
@@ -67,12 +72,6 @@ blockquote {
 	font-weight: 300;
 	letter-spacing: 0.73px;
 	line-height: 43px;
-}
-
-.nav-links {
-	text-align: center;
-	font-family: 'Cormorant Garamond', serif;
-	text-transform: uppercase;
 }
 
 ul {
@@ -94,12 +93,29 @@ h1 ~ p {
 
 /* XXXXXX BUTTONS XXXXXX */
 
-a {
+.cta-btn {
+    color: #86332C;
+    border: 0.25px solid #86332C;
+    padding: 15px 40px;
+    margin-top: 2rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+	background-color: #f6f3f3;
+}
+
+.main-nav-btn {
 	color: black;
+	display: block;
+	text-align: center;
+	font-family: 'Cormorant Garamond', serif;
+	text-transform: uppercase;
 	text-decoration: none;
 }
 
-a:hover {
+.main-nav-btn:hover {
 	border-bottom: 0.5px solid #000;
 }
 
@@ -108,7 +124,7 @@ a:hover {
 }
 
 
-/* >>>>>> 5.0 UTILITY <<<<<< (ONLY FOR CLASSES THAT ARE DOING ONE TASK) */
+/* XXXXXX UTILITY XXXXXX (ONLY FOR CLASSES THAT ARE DOING ONE TASK) */
 
 .bg-gray {
 	background-color: #f6f3f3;
@@ -136,14 +152,14 @@ a:hover {
 	width: 60%;
 }
 
-header {
-	margin-bottom: 5rem;
+.center {
+	text-align: center;
 }
 
 
 
+/* XXXXXX SITE HEADER XXXXXX */
 
-/* XXXXXX 3.2 Site Header XXXXXX */
 .logo {
 	width: 80px;
 	margin-bottom: 0.75rem;
@@ -168,12 +184,8 @@ header {
 }
 
 
+/* XXXXXX SITE FOOTER XXXXXX */
 
-/* MAIN */
-
-
-
-/* XXXXXX 3.3 Site Footer XXXXXX */
 footer ul li {
 	font-family: 'Gibson', sans-serif;
 	font-size: 16px;
@@ -208,34 +220,22 @@ footer ul {
 }
 
 
+/* >>>>>> CONTACT PAGE <<<<<< */
 
 
-
-/* >>>>>> CONTACT <<<<<< */
 #map {
-    height: 200px;
-    margin-top: 100px;
-    width: 50%;
+  height: 200px;
+  margin-top: 100px;
+  width: 50%;
 }
 
+/* XXXXXX SLIDESHOW CONTAINER XXXXXX */
 
 
-
-/* SLIDESHOW CONTAINER */
-.slideshow-container {
+.carousel {
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
 }
 
 .numbertext {
@@ -278,13 +278,15 @@ footer ul {
 }
 
 /* ON SMALLER SCREENS, DESCREASE TEXT SIZE */
+
+
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
 
 
 
-/*COLUMNS */
+/* XXXXXX COLUMNS XXXXXX */
 
 [class*='col-'] { /* Targets any class that beings with col- */
 	float: left;
@@ -420,7 +422,7 @@ footer ul {
 	width: 91.67%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TABLET SIZE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* TABLET SIZE  */
 
 
 @media (max-width: 850px) {
@@ -435,7 +437,7 @@ footer ul {
 	}
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MOBILE SIZE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* MOBILE SIZE */
 
 
 @media (max-width: 480px) {
