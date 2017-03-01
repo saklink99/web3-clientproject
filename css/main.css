@@ -12,6 +12,7 @@
 .wrapper {
 	width: 85%;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 section {
@@ -125,6 +126,24 @@ h1 ~ p {
 	border-bottom: none;
 }
 
+.footer-nav-btn {
+	font-size: 0.9375rem;
+	font-weight: 100;
+	letter-spacing: .01px;
+	color: black;
+	display: block;
+	text-align: center;
+	font-family: 'Gibson', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+
+#social-media-btn {
+	width: 100px;
+	margin: 0 auto;
+}
+
 
 /* XXXXXX UTILITY XXXXXX (ONLY FOR CLASSES THAT ARE DOING ONE TASK) */
 
@@ -175,6 +194,7 @@ h1 ~ p {
 }
 
 
+
 /* XXXXXX SITE HEADER XXXXXX */
 
 .logo {
@@ -203,13 +223,6 @@ h1 ~ p {
 
 /* XXXXXX SITE FOOTER XXXXXX */
 
-footer ul li {
-	font-family: 'Gibson', sans-serif;
-	font-size: 16px;
-	font-weight: 100;
-	letter-spacing: .01px;
-	text-transform: uppercase;
-}
 
 .footer-logo {
 	width: 50px;
