@@ -21,6 +21,7 @@ section {
 
 header {
 	margin-bottom: 5rem;
+	padding: 0;
 }
 
 
@@ -212,7 +213,7 @@ h1 ~ p {
 	display: none;
 }
 
-.tablet-logo {
+.tablet-logo-container {
 	display: none;
 }
 
@@ -455,7 +456,7 @@ footer ul {
 	.desktop-logo {
 		display: none;
 	}
-	.tablet-logo {
+	.tablet-logo-container {
 		display: flex;
 		justify-content: center;
 
@@ -477,15 +478,18 @@ footer ul {
 	}
 
 	.wrapper {
-		width:100%;
+		width: 100%;
+		text-align: center;
 	}
 	
 	img {
-		margin: 0;
+		margin: 0 auto;
+		width: 100%;
 	}
 
 	h2 {
 		padding: 0;
+		font-size: 1rem;
 	}
 
 	.col-1-2 {
@@ -493,8 +497,9 @@ footer ul {
 		padding: 0;
 	}
 
-
-}
+	.tablet-logo-container {
+		display: none;
+	}
 
 
 
