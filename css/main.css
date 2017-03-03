@@ -74,12 +74,16 @@ h6 {
 	margin: 0;
 }
 
+
+h5, h6 {
+	padding-bottom: 0.25rem;
+}
+
 p {
 	font-family: 'Gibson', sans-serif;
 	font-size: 1.15rem;
 	font-weight: 100;
 	letter-spacing: 1.05px;
-	line-height: 39px;
 
 	width: 90%;
 	margin: 0 auto;
@@ -99,6 +103,7 @@ blockquote {
 
 ul {
 	list-style: none;
+	padding: 0;
 }
 
 h1 ~ p {
@@ -154,19 +159,61 @@ h1 ~ p {
 	font-size: 0.9375rem;
 	font-weight: 100;
 	letter-spacing: .01px;
-	color: black;
+	color: #000;
 	display: block;
-	text-align: center;
 	font-family: 'Gibson', sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 
+.footer-nav-btn.left:hover {
+	color: #86332C;
+	font-weight: 400;
+}
+
+.footer-nav-btn.right:hover {
+	color: #86332C;
+}
+
+footer h6.right a {
+	text-transform: none;
+}
+
+footer h6.center {
+	font-size: 0.75rem;
+	padding-top: 1rem;
+}
+
+footer h6.center ~ p {
+	font-size: 0.75rem;
+}
+
+footer p {
+	font-size: 0.75rem;
+	line-height: 1.15rem;
+}
+
+
+
 
 #social-media-btn {
 	width: 100px;
-	margin: 0 auto;
+	font-size: 1.85rem;
+	padding: 0;
+	text-decoration: none;
+	margin: 0;
 }
+
+.fa-facebook-official, .fa-instagram {
+	color: #e4e4e4;
+}
+
+.fa-facebook-official:hover, .fa-instagram:hover {
+	color: #86332C;
+}
+
+
+
 
 
 /* XXXXXX UTILITY XXXXXX (ONLY FOR CLASSES THAT ARE DOING ONE TASK) */
@@ -192,6 +239,10 @@ h1 ~ p {
 
 .center {
 	text-align: center;
+}
+
+.right {
+	text-align: right;
 }
 
 .relative {
@@ -235,14 +286,16 @@ h1 ~ p {
 
 
 /* XXXXXX SITE FOOTER XXXXXX */
+
 footer {
+	display: flex;
+
 	padding: 4rem 0;
 }
+
 footer > div {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 
 footer > div:first-of-type, footer > div:last-of-type {
@@ -256,11 +309,27 @@ footer > div:nth-of-type(2) {
 .footer-logo-container {
 	display: flex;
 	justify-content: center;
-	margin-top: 1em;
+	margin-bottom: 0.75rem;
 }
 
-footer ul {
-	justify-content: space-around;
+#social-media-btn a {
+	padding-right: 1rem;
+}
+
+footer li {
+	padding-bottom: 0.25rem;
+}
+
+footer .logo {
+	width: 3rem;
+}
+
+footer h1 {
+	font-size: 1.25rem;
+}
+
+footer h1 ~ p {
+	font-size: 0.75rem;
 }
 
 
@@ -277,9 +346,9 @@ footer ul {
 
 
 .carousel {
-  max-width: 1000px;
+  max-width: 100%;
   position: relative;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .numbertext {
@@ -517,6 +586,13 @@ footer ul {
 		padding: 0;
 	}
 
+	footer {
+		display: block;
+	}
+
+	footer > div {
+		width: 100%;
+	}
 
 
 }
