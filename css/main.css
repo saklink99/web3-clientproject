@@ -17,6 +17,7 @@
 
 section {
 	position: relative;
+	padding: 4rem 0;
 }
 
 header {
@@ -43,11 +44,7 @@ h2 {
 	font-size: 2.75rem;
 	font-weight: 400;
 	letter-spacing: 2.1px;
-	text-align: center;
 	color: #86332C;
-	padding: 8rem 3rem 3rem;
-	margin-left: -5rem;
-}
 }
 
 h3 {
@@ -59,14 +56,34 @@ h3 {
 	line-height: 33px;
 }
 
+h5 {
+	font-family: 'Gibson', sans-serif;
+	font-size: 16px;
+	color: #7d494b;
+	font-weight: 100;
+	letter-spacing: .01px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+h6 {
+	font-family: 'Gibson', sans-serif;
+	font-size: 16px;
+	font-weight: 100;
+	letter-spacing: .01px;
+	margin: 0;
+}
+
 p {
 	font-family: 'Gibson', sans-serif;
 	font-size: 1.15rem;
 	font-weight: 100;
 	letter-spacing: 1.05px;
 	line-height: 39px;
-	padding-left: 5rem;
-	padding-right: 6rem;
+
+	width: 90%;
+	margin: 0 auto;
+	max-width: 300px;
 }
 
 blockquote {
@@ -76,6 +93,8 @@ blockquote {
 	font-weight: 300;
 	letter-spacing: 0.73px;
 	line-height: 43px;
+	margin: 0;
+	padding: 4rem;
 }
 
 ul {
@@ -85,7 +104,7 @@ ul {
 h1 ~ p {
 	font-family: 'Josefin Sans', sans-serif;
 	text-align: center;
-	font-size: 1rem;;
+	font-size: 1rem;
 	font-weight: 100;
 	color: #000;
 	text-transform: uppercase;
@@ -101,9 +120,13 @@ h1 ~ p {
     color: #86332C;
     border: 0.25px solid #86332C;
     padding: 15px 40px;
-    margin-top: 2rem;
-    display: inline-block;
+    display: block;
     text-decoration: none;
+    text-align: center;
+
+    width: 90%;
+    margin: 2rem auto 0 auto;
+    max-width: 300px;
 }
 
 .cta-btn:hover {
@@ -159,20 +182,12 @@ h1 ~ p {
 }
 
 .img-fullwidth {
-	width: 75%;
-	min-width: 450px;
+	width: 100%;
+	max-width: 450px;
 }
 
 .flex {
 	display: flex;
-}
-
-.width-1-5 {
-	width: 20%;
-}
-
-.width-3-5 {
-	width: 60%;
 }
 
 .center {
@@ -200,7 +215,8 @@ h1 ~ p {
 
 .logo {
 	width: 80px;
-	margin-bottom: 0.75rem;
+	margin: 0 auto 0.75rem auto;
+	display: block;
 }
 
 .main-nav > ul {
@@ -217,33 +233,30 @@ h1 ~ p {
 	display: none;
 }
 
-.mobile-btn-wrapper {
-	display: none;
-}
-
 
 /* XXXXXX SITE FOOTER XXXXXX */
-
-
-.footer-logo {
-	width: 50px;
-	margin-bottom: 0.75rem;
+footer {
+	padding: 4rem 0;
+}
+footer > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-footer p {
-	font-family: 'Gibson', sans-serif;
-	font-size: 16px;
-	font-weight: 100;
-	letter-spacing: .01px;
+footer > div:first-of-type, footer > div:last-of-type {
+	width: 20%;
 }
 
-footer h5 {
-	font-family: 'Gibson', sans-serif;
-	font-size: 16px;
-	color: #7d494b;
-	font-weight: 100;
-	letter-spacing: .01px;
-	text-transform: uppercase;
+footer > div:nth-of-type(2) {
+	width: 60%;
+}
+
+.footer-logo-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
 }
 
 footer ul {
@@ -459,7 +472,7 @@ footer ul {
 	.tablet-logo-container {
 		display: flex;
 		justify-content: center;
-
+		margin-top: 1em;
 	}
 }
 
@@ -479,7 +492,6 @@ footer ul {
 
 	.wrapper {
 		width: 100%;
-		text-align: center;
 	}
 	
 	img {
@@ -497,9 +509,14 @@ footer ul {
 		padding: 0;
 	}
 
-	.tablet-logo-container {
-		display: none;
+	header {
+		margin-bottom: 2rem;
+	}
+
+	.mobile-nav > ul {
+		padding: 0;
 	}
 
 
 
+}
