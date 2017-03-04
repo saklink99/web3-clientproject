@@ -1,12 +1,56 @@
 @charset "UTF-8";
 
-/* BASE STYLES */
+/* TABLE OF CONTENTS */
+
+/* 1.0 Base Styles */
+/* 1.1 Utility Classes */
+
+/* 2.0 Site Header */
+/* 2.1 Site Footer */
+
+/* 3.0 Typography */
+/* 3.1 Buttons */
+/* 3.2 Media */
+
+
+/* CONTACT PAGE */
+/* EVENTS PAGE */
+
+/* Columns */
+
+/* Tablet Size */
+/* Mobile Size */
+
+
+
+
+
+
+
+/* 1.0 BASE STYLES & STRUCTURE */
+
 *, *:after, *:before {
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+[class*='col-'] { /* Targets any class that beings with col- */
+	float: left;
+	padding-right: 20px; /* Using pixels because we never want the gutter to change size */
+	margin-bottom: 20px;
+}
+
+.row:after {
+	content: ""; /* You have to this for any pseudo element before/after */
+	display: table;
+	clear: both;
+}
+
+[class*='col-']:last-of-type {
+	padding-right: 0;
 }
 
 .wrapper {
@@ -25,9 +69,131 @@ header {
 	padding: 0;
 }
 
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+#what-we-offer {
+	margin-top: 6rem;
+}
 
 
-/* XXXXXX TYPOGRAPHY XXXXXX */
+
+
+
+/* 1.1 UTILITY CLASSES */
+
+
+.img-fullwidth {
+	width: 100%;
+	max-width: 450px;
+}
+
+.flex {
+	display: flex;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.relative {
+	position: relative;
+}
+
+
+
+
+
+
+/* 2.0 SITE HEADER */
+
+.logo {
+	width: 80px;
+	margin: 0 auto 0.75rem auto;
+	display: block;
+}
+
+.main-nav > ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mobile-nav, .mobile-btn-wrapper {
+	display: none;
+}
+
+.tablet-logo-container {
+	display: none;
+}
+
+
+
+
+
+
+
+/* 2.1 SITE FOOTER */
+
+footer {
+	display: flex;
+
+	padding: 4rem 0;
+}
+
+footer > div {
+	display: flex;
+	flex-direction: column;
+}
+
+footer > div:first-of-type, footer > div:last-of-type {
+	width: 20%;
+}
+
+footer > div:nth-of-type(2) {
+	width: 60%;
+}
+
+.footer-logo-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 8px;
+}
+
+#social-media-btn a {
+	padding-right: 1rem;
+}
+
+footer li {
+	padding-bottom: 0.25rem;
+}
+
+footer .logo {
+	width: 3rem;
+}
+
+footer h1 {
+	font-size: 1.25rem;
+}
+
+footer h1 ~ p {
+	font-size: 0.75rem;
+}
+
+
+
+
+
+
+
+/* 3.0 TYPOGRAPHY */
+
 h1 {
 	font-family: 'Josefin Sans', sans-serif;
 	text-align: center;
@@ -43,8 +209,17 @@ h2 {
 	font-family:'Cormorant Garamond', serif; 
 	font-size: 2.75rem;
 	font-weight: 400;
-	letter-spacing: 2.1px;
+	letter-spacing: 3px;
 	color: #86332C;
+
+	margin-bottom: 4rem;
+	padding: 0 2rem;
+}
+
+#about h2 {
+	font-size: 2rem;
+	letter-spacing: 2.25px;
+	padding: 0 2rem;
 }
 
 h3 {
@@ -74,7 +249,6 @@ h6 {
 	margin: 0;
 }
 
-
 h5, h6 {
 	padding-bottom: 0.25rem;
 }
@@ -84,26 +258,11 @@ p {
 	font-size: 1.15rem;
 	font-weight: 100;
 	letter-spacing: 1.05px;
+	padding: 0 4.9rem;
+	line-height: 1.75rem;
 
-	width: 90%;
 	margin: 0 auto;
-	max-width: 300px;
-}
-
-blockquote {
-	background-color: #f6f3f3;
-	font-family: 'Cormorant Garamond', serif; 
-	font-size: 44px;
-	font-weight: 300;
-	letter-spacing: 0.73px;
-	line-height: 43px;
-	margin: 0;
-	padding: 4rem;
-}
-
-ul {
-	list-style: none;
-	padding: 0;
+	max-width: 446px;
 }
 
 h1 ~ p {
@@ -114,12 +273,26 @@ h1 ~ p {
 	color: #000;
 	text-transform: uppercase;
 	letter-spacing: 0.25rem;
-	margin: 5px;
+}
+
+blockquote {
+	background-color: #f6f3f3;
+	font-family: 'Cormorant Garamond', serif; 
+	font-size: 2.75rem;
+	font-weight: 300;
+	letter-spacing: 0.73px;
+	line-height: 4.5rem;
+
+	margin: 5rem 0 0 1rem;
+	padding: 4rem 14rem;
 }
 
 
 
-/* XXXXXX BUTTONS XXXXXX */
+
+
+
+/* 3.1 BUTTONS */
 
 .cta-btn {
     color: #86332C;
@@ -160,29 +333,22 @@ h1 ~ p {
 	font-weight: 100;
 	letter-spacing: .01px;
 	color: #000;
-	display: block;
 	font-family: 'Gibson', sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 
-.footer-nav-btn.left:hover {
-	color: #86332C;
-	font-weight: 400;
+.footer-nav-btn:hover {
+	border-bottom: 0.5px solid #000;
 }
 
-.footer-nav-btn.right:hover {
-	color: #86332C;
-}
+.footer-logo-container a:hover {
+	border-bottom: none;
+}/* This removes the border from the logo */
 
 footer h6.right a {
 	text-transform: none;
-}
-
-footer h6.center {
-	font-size: 0.75rem;
-	padding-top: 1rem;
-}
+}/* This makes Matt's email lowercase */
 
 footer h6.center ~ p {
 	font-size: 0.75rem;
@@ -192,9 +358,6 @@ footer p {
 	font-size: 0.75rem;
 	line-height: 1.15rem;
 }
-
-
-
 
 #social-media-btn {
 	width: 100px;
@@ -216,147 +379,50 @@ footer p {
 
 
 
-/* XXXXXX UTILITY XXXXXX (ONLY FOR CLASSES THAT ARE DOING ONE TASK) */
 
-.bg-gray {
+/* 3.2 MEDIA */
+
+.bg-gray-bar {
 	background-color: #f6f3f3;
 	height: 190px;
 	width: 100%;
 	z-index: -1;
 	position: absolute;
-	top: 68%;
+}
+
+body .bg-gray-bar:first-of-type {
+	top: 48%;
 	left: 0;
 }
 
-.img-fullwidth {
-	width: 100%;
-	max-width: 450px;
-}
-
-.flex {
-	display: flex;
-}
-
-.center {
-	text-align: center;
-}
-
-.right {
-	text-align: right;
-}
-
-.relative {
-	position: relative;
-}
-
-
-/* XXXXXX IDS XXXXXX */
-
 #home-stamp {
-	min-width: 200px;
 	width: 35%;
+	min-width: 200px;
+	
 	position: absolute;
 	top: 61%;
     left: 63%;
 }
 
+#about img:nth-of-type(2) {
+	width: 32%;
+	min-width: 100px;
 
-
-/* XXXXXX SITE HEADER XXXXXX */
-
-.logo {
-	width: 80px;
-	margin: 0 auto 0.75rem auto;
-	display: block;
+	position: absolute;
+	top: 62%;
+	left: 17%;
 }
 
-.main-nav > ul {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
+#what-we-offer img {
+	margin-left: 5rem;
+}/* This is moving the floor plan inwards */
 
-.mobile-nav, .mobile-btn-wrapper {
-	display: none;
-}
-
-.tablet-logo-container {
-	display: none;
-}
-
-
-/* XXXXXX SITE FOOTER XXXXXX */
-
-footer {
-	display: flex;
-
-	padding: 4rem 0;
-}
-
-footer > div {
-	display: flex;
-	flex-direction: column;
-}
-
-footer > div:first-of-type, footer > div:last-of-type {
-	width: 20%;
-}
-
-footer > div:nth-of-type(2) {
-	width: 60%;
-}
-
-.footer-logo-container {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 0.75rem;
-}
-
-#social-media-btn a {
-	padding-right: 1rem;
-}
-
-footer li {
-	padding-bottom: 0.25rem;
-}
-
-footer .logo {
-	width: 3rem;
-}
-
-footer h1 {
-	font-size: 1.25rem;
-}
-
-footer h1 ~ p {
-	font-size: 0.75rem;
-}
-
-
-/* >>>>>> CONTACT PAGE <<<<<< */
-
-
-#map {
-  height: 200px;
-  margin-top: 100px;
-  width: 50%;
-}
-
-/* XXXXXX SLIDESHOW CONTAINER XXXXXX */
-
+/* SLIDESHOW CONTAINER */
 
 .carousel {
   max-width: 100%;
   position: relative;
   margin: 0 auto;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 .dot {
@@ -390,39 +456,48 @@ footer h1 ~ p {
   to {opacity: 1}
 }
 
-/* ON SMALLER SCREENS, DESCREASE TEXT SIZE */
 
 
 
-/* XXXXXX COLUMNS XXXXXX */
 
-[class*='col-'] { /* Targets any class that beings with col- */
-	float: left;
-	padding-right: 20px; /* Using pixels because we never want the gutter to change size */
-	margin-bottom: 20px;
+
+
+
+
+
+
+
+/* >>>>>> CONTACT PAGE <<<<<< */
+
+#map {
+  height: 200px;
+  margin-top: 100px;
+  width: 50%;
 }
 
-.row:after {
-	content: ""; /* You have to this for any pseudo element before/after */
-	display: table;
-	clear: both;
-}
 
-[class*='col-']:last-of-type {
-	padding-right: 0;
-}
+/* >>>>>> EVENTS PAGE <<<<<< */
+
+
+
+
+
+
+/* COLUMNS */
+
+/* ONE COLUMN */
 
 .col-1-1 {
 	width: 100%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TWO COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* TWO COLUMNS */
 
 .col-1-2 {
 	width: 50%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ THREE COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* THREE COLUMNS */
 
 .col-1-3 {
 	width: 33.33%
@@ -435,7 +510,7 @@ footer h1 ~ p {
 .col-2-5 {
 	width: 40%;
 }
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FOUR COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* FOUR COLUMNS */
 
 .col-1-4 {
 	width: 25%;
@@ -445,7 +520,7 @@ footer h1 ~ p {
 	width: 75%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FIVE COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* FIVE COLUMNS */
 
 .col-1-5 {
 	width: 20%;
@@ -459,7 +534,7 @@ footer h1 ~ p {
 	width: 80%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SIX COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* SIX COLUMNS */
 
 .col-1-6 {
 	width: 16.66%;
@@ -469,7 +544,7 @@ footer h1 ~ p {
 	width: 83.34%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SEVEN COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* SEVEN COLUMNS */
 
 .col-1-7 {
 	width: 14.285%;
@@ -479,7 +554,7 @@ footer h1 ~ p {
 	width: 85.715%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EIGHT COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* EIGHT COLUMNS */
 
 .col-1-8 {
 	width: 12.5%;
@@ -489,7 +564,7 @@ footer h1 ~ p {
 	width: 87.5%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NINE COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  NINE COLUMNS */
 
 .col-1-9 {
 	width: 11.11%;
@@ -499,7 +574,7 @@ footer h1 ~ p {
 	width: 88.89%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TEN COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* TEN COLUMNS */
 
 .col-1-10 {
 	width: 10%;
@@ -509,8 +584,7 @@ footer h1 ~ p {
 	width: 90%;
 }
 
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ELEVEN COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ELEVEN COLUMN */
 
 .col-1-11 {
 	width: 9.09%;
@@ -520,7 +594,7 @@ footer h1 ~ p {
 	width: 90.91%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TWELVE COLUMNS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* TWELVE COLUMNS */
 
 .col-1-12 {
 	width: 8.33%;
@@ -530,10 +604,16 @@ footer h1 ~ p {
 	width: 91.67%;
 }
 
-/* TABLET SIZE  */
 
+
+
+
+
+/* TABLET SIZE */
 
 @media (max-width: 850px) {
+
+/* TABLET: Site Header */
 
 	.desktop-logo {
 		display: none;
@@ -543,56 +623,141 @@ footer h1 ~ p {
 		justify-content: center;
 		margin-top: 1em;
 	}
+
+
+/* TABLET: Site Structure */
+/* TABLET: Site Footer */
+/* TABLET: Typography */
+/* TABLET: Buttons */
+/* TABLET: Media */
+
 }
+
+
+
+
+
 
 /* MOBILE SIZE */
 
-
 @media (max-width: 480px) {
 
-	.mobile-btn-wrapper {
-		display: flex;
-		justify-content: flex-end;
+/* MOBILE: Site Header */
+
+header {
+	margin-bottom: 2rem;
+}
+
+.mobile-btn-wrapper {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.main-nav {
+	display: none;
+}
+
+.mobile-nav > ul {
+	padding: 0;
+}
+
+
+
+
+
+
+/* MOBILE: Site Structure */
+
+.wrapper {
+	width: 100%;
+}
+
+.col-1-2 {
+	width: 100%;
+	padding: 0;
+}
+
+#what-we-offer {
+	margin-top: 0;
+}
+
+
+
+
+
+
+/* MOBILE: Site Footer */
+
+footer {
+	display: block;
+}
+
+footer > div {
+	width: 100%;
+}
+
+
+
+
+
+
+/* MOBILE: Typography */
+
+h2 {
+	padding: 0 1rem;
+	font-size: 2.65rem;
+	text-align: left;
+	margin-bottom: 3rem;
 	}
 
-	.main-nav {
-		display: none;
+#what-we-offer h3 {
+	padding-left: 2rem;
+}
+
+#what-we-offer p {
+	text-align: left;
+}
+
+p {
+	line-height: 2rem;
+	padding: 0 3rem;
+}
+
+blockquote {
+	font-size: 1.45rem;
+	letter-spacing: 0.73px;
+	line-height: 2.5rem;
+	margin: 0;
+	padding: 3rem;
+}
+
+
+
+
+
+
+/* MOBILE: Buttons */
+
+
+
+
+
+
+
+/* MOBILE: Media */
+
+img {
+	margin: 0 auto;
+	width: 100%;
 	}
 
-	.wrapper {
-		width: 100%;
-	}
-	
-	img {
-		margin: 0 auto;
-		width: 100%;
-	}
+#about img:nth-of-type(2) {
+	display: none;
+}
 
-	h2 {
-		padding: 0;
-		font-size: 1rem;
-	}
 
-	.col-1-2 {
-		width: 100%;
-		padding: 0;
-	}
-
-	header {
-		margin-bottom: 2rem;
-	}
-
-	.mobile-nav > ul {
-		padding: 0;
-	}
-
-	footer {
-		display: block;
-	}
-
-	footer > div {
-		width: 100%;
-	}
-
+.bg-gray-bar {
+	display: none;
+}
 
 }
