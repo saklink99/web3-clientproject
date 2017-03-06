@@ -1,0 +1,72 @@
+	
+.flex {
+	/*define a block flex container*/
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.inline-flex {
+	/*define an inline-block flex container*/
+	display: inline-flex;
+}
+
+.flex-col {
+	/*define main axis (row or column)*/
+	-webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-main-center {
+	/*define alignment along main axis (row or column)*/
+    -webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+.flex-main-stretch {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+.flex-cross-center {
+	/*define alignment along cross-axis*/
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+	/*define how cross axis space is filled when items wrap*/
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-content: center;
+
+.flex-wrap {
+	/*allow items to wrap. By default, all items in flex container try to fit on one line*/
+	-webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#transforms {
+	-webkit-transform: scale(1.5);
+     -moz-transform: scale(1.5);
+       -o-transform: scale(1.5);
+          transform: scale(1.5);
+}
