@@ -6,6 +6,7 @@
 <script src="https://use.typekit.net/vca8cgb.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -19,100 +20,163 @@
 
 
 <body>
+  <div class="bg-gray-bar"></div>
   <div class="wrapper">
-    <header>
-      <h1><a href="#"><img src="img/logo.png" alt="Talon Room"></a></h1>
-    </header>
-    <nav class="main-nav">
+    <nav class="mobile-nav">
       <ul>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="http://www.chefauchef.com/" target='_blank'>ChefauChef</a></li>
       </ul>
     </nav>
     <div class="mobile-btn-wrapper"><!-- Look up styling for hamburger menus -->
-      <a href="#" class="mobile-nav-btn"><i class="fa fa-bars" aria-hidden="true"></i>
-</a>
-  </div>
-<section>
-<div class="bg-gray"></div>
-<div class="row">
-  <div class="col-2-5">
-    <img src="img/home-img-01.jpg" alt="wine glasses">
-    <img src="img/home-img-01.jpg" alt="married couple sitting">
-  </div>
-  <div class="col-3-5">
-    <h2>We set it up, you make it a party</h2>
-    <p>Whether you are searching for a place to have your first dance as a married couple, celebrate an anniversary, thank your hard working employees with a company party, tailgate for Big Ten games, or even host a Greek life event, you can be sure everyone will have an excellent time in the Talon Room!</p>
-  </div>
-</div>
-</section>
-<section>
-  <div class="col-1-5">
-    <h2>Packages</h2>
-  </div>
-  <div class="col-2-5"></div>
-  <div class="col-1-5"></div>
-</section>
-<section>
-</section>
-  <div class="row">
-    <div class="col-2-5">
-      <img src="img/home-img-01.jpg" alt="wine glasses">
+      <a href="#" class="mobile-nav-btn"><i class="fa fa-bars" aria-hidden="true"></i></a>
     </div>
-    <div class="col-3-5">
-      <h5>Talon Room Wedding</h5>
-      <p>$1,800.00</p>
-      <div></div>
-      <p>includes</p>
-      <ul>
-        <li>Event Space &amp; Coordination</li>
-        <li>Setup &amp; Teardown</li>
-        <li>Professional Bartenders </li>
-        <li>Select Linens &amp; Cleaning Fee</li>
-      </ul>
 
+    <header>
+      <div class="tablet-logo-container">
+        <a href="#" class="main-nav-btn">
+          <img src="img/logo.svg" alt="Talon Room" class="logo">
+          <h1>Talon Room</h1>
+          <p>By ChefauChef</p>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li class="nav-links"><a href="events.html" class="main-nav-btn">Events</a></li>
+          <li class="nav-links"><a href="calendar.html" class="main-nav-btn">Calendar</a></li>
+          <li class="desktop-logo nav-links">
+            <a href="#" class="main-nav-btn">
+              <img src="img/logo.svg" alt="Talon Room" class="logo">
+              <h1>Talon Room</h1>
+              <p>By ChefauChef</p>
+            </a>
+          </li>
+          <li class="nav-links"><a href="contact.html" class="main-nav-btn">Contact</a></li>
+          <li class="nav-links"><a href="http://www.chefauchef.com/" target='_blank' class="main-nav-btn">ChefauChef</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about">
+      <div class="row">
+        <div class="col-1-2">
+          <img src="img/home-img-03.jpg" alt="College senior smiling" class="img-fullwidth">
+          <img class="img-fullwidth" src="img/home-img-04.jpg" alt="champagne glasses">
+        </div>
+        <div class="col-1-2">
+          <h2>We go above and beyond to create events that will leave a mark.</h2>          
+          <p>Whether you are searching for a place to have your first dance as a married couple, celebrate an anniversary, thank your hard working employees with a company party, tailgate for Big Ten games, or even host a Greek life event, you can be sure everyone will have an excellent time in the Talon Room!</p>
+          <a href="#" class="cta-btn">price quote</a>
+          <a href="#" class="cta-btn">make a booking</a>
+        </div>
+      </div>
+    </section>
+    </div><!-- CLOSING WRAPPER DIV -->
+
+    <section id="packages" class="bg-gray">
+      <div class="flex packages-header">
+        <h2>Packages</h2>
+        <div>
+          <select>
+            <option value="weddings">Weddings</option>
+            <option value="business">Business</option>
+            <option value="tailgates">Tailgates</option>
+            <option value="aeries-events">Aeries Events</option>
+            <option value="greek-life">Greek Life</option>
+            <option value="wine-down-wednesday">Wine-Down Wednesday</option>
+            <option value="catering">Catering</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="weddings">
+        <div class="package-card">
+          <div class="col-2-5"></div>
+          <div class="col-3-5">
+            <h3>Talon Room Wedding</h3>
+            <h4>$1,800.000</h4>
+            <div></div>
+            <p>Viral shoreditch humblebrag portland. Green juice disrupt whatever, wayfarers kitsch art party shoreditch knausgaard thundercats neui food truck marfa, schlitz butcher glossier meggings tattooed. Gentrify activated charcoal gluten-free roof party, hammock snackwave migas cornhole enamel pin echo park fixie bespoke pug humblebrag af.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+  
+
+  <footer class="wrapper">
+    <div>
+      <nav>
+        <ul>
+          <li><a href="#" class="footer-nav-btn">Events</a></li>
+          <li><a href="#" class="footer-nav-btn">Calendar</a></li>
+          <li><a href="#" class="footer-nav-btn">Contact</a></li>
+          <li><a href="http://www.chefauchef.com/" target='_blank' class="footer-nav-btn">ChefauChef</a></li>
+        </ul>
+        <ul id="social-media-btn" class="flex">
+          <li><a href="https://www.facebook.com/talonroom/" target='_blank'><i class="fa fa-facebook-official" aria-hidden="true"></i>
+            </a></li>
+          <li><a href="https://www.instagram.com/talonroom/" target='_blank'><i class="fa fa-instagram" aria-hidden="true"></i>
+          </a></li>
+        </ul>
+      </nav>  
     </div>
-  </div>
 
-</section>
-
-
-<footer class="wrapper">
-  <div class="col-1-5">
-    <h4><a href="#"><img src="img/logo.png" alt="Talon Room"></a></h4>
-    <p>230 North 12th Street</p>
-    <p>Lincoln, NE 68508</p>
-  </div>
-  <div class="col-3-5">
-    <nav>
-      <ul>
-      <li><a href="#">Events</a></li>
-      <li><a href="#">Calendar</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="http://www.chefauchef.com/" target='_blank'>ChefauChef</a></li>
-      </ul>
-    </nav>
-    <div class="social-nav">
-      <li><a href="http://www.facebook.com/" target='_blank'><i class="fa fa-facebook-official" aria-hidden="true"></i>
-</a></li>
-      <li><a href="http://www.instagram.com/" target='_blank'><i class="fa fa-instagram" aria-hidden="true"></i>
-</a></li>  <!--come back to this and figure out how to code the social media stuff & also link to talon room's actual pages-->
+    <div>
+      <div class="footer-logo-container">
+        <a href="#" class="footer-nav-btn">
+          <img src="img/logo.svg" alt="Talon Room" class="logo">
+          <h1>Talon Room</h1>
+          <p>By ChefauChef</p>
+        </a>
+      </div>
+      <p class="center">230 North 12th Street</p>
+      <p class="center">Lincoln, NE 68508</p>
     </div>
-  </div>
-  <div class="col-1-5">
-    <h5>Event Coordinator</h5>
-    <p>Matthew Rogge</p>
-    <p><a href="tel:1-402-641-0943">Phone: 402.641.0943</a></p>
-    <p><a href="mailto:matt@chefauchef.com">Email: matt@chefauchef.com</a></p>
-  </div>
-</footer>
+
+    <div>
+      <h5>Event Coordinator</h5>
+      <h6>Matthew Rogge</h6>
+      <h6><a href="tel:1-402-641-0943" class="footer-nav-btn">402.641.0943</a></h6>
+      <h6><a href="mailto:matt@chefauchef.com" class="footer-nav-btn">matt@chefauchef.com</a></h6>
+    </div>
+
+  </footer>
 
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) this should always come FIRST-->
-    
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Custom JS file -->
     <script src="js/script.js"></script>
+
+  <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+
+
+
+
 </body>
 </html>
