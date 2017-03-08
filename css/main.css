@@ -1,32 +1,56 @@
 @charset "UTF-8";
 
-/* TABLE OF CONTENTS */
+/* 
 
-/* 1.0 Base Styles */
-/* 1.1 Utility Classes */
+TABLE OF CONTENTS
+-----------------------------
 
-/* 2.0 Site Header */
-/* 2.1 Site Footer */
+1.0 BASE STYLES
+	1.1 Utility Classes
 
-/* 3.0 Typography */
-/* 3.1 Buttons */
-/* 3.2 Media */
+2.0 STRUCTURE
+	2.1 Site Header
+	2.2 Typography
+	2.3 Buttons
+	2.4 Media
+	2.5 Site Footer
+
+3.0 CONTACT PAGE
+4.0 EVENTS PAGE
+
+5.0 COLUMN WIDTHS
+
+6.0 TABLET SIZE
+	6.1 Tablet Header
+	6.2 Tablet Structure
+	6.3 Tablet Typography
+	6.4 Tablet Buttons
+	6.5 Tablet Media
+	6.6 Tablet Footer
+
+7.0 MOBILE SIZE
+	7.1 Mobile Header
+	7.1 Mobile Structure
+	7.2 Mobile Typography
+	7.3 Mobile Buttons
+	7.4 Mobile Media
+	7.5 Mobile Footer
+
+-----------------------------
+
+*/
 
 
-/* CONTACT PAGE */
-/* EVENTS PAGE */
-
-/* Columns */
-
-/* Tablet Size */
-/* Mobile Size */
 
 
 
 
+/* 1.0 BASE STYLES */
 
-
-/* 1.0 BASE STYLES & STRUCTURE */
+html * {
+  padding: 0;
+  margin: 0;
+}
 
 *, *:after, *:before {
 	-moz-box-sizing: border-box;
@@ -34,28 +58,6 @@
 	-o-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-}
-
-[class*='col-'] { /* Targets any class that beings with col- */
-	float: left;
-	padding-right: 20px; /* Using pixels because we never want the gutter to change size */
-	margin-bottom: 20px;
-}
-
-.row:after {
-	content: ""; /* You have to this for any pseudo element before/after */
-	display: table;
-	clear: both;
-}
-
-[class*='col-']:last-of-type {
-	padding-right: 0;
-}
-
-.wrapper {
-	width: 75%;
-	margin: 0 auto;
-	overflow-x: hidden;
 }
 
 section {
@@ -73,6 +75,35 @@ ul {
 	padding: 0;
 }
 
+[class*='col-'] { /* Targets any class that beings with col- */
+	float: left;
+	padding-right: 20px; /* Using pixels because we never want the gutter to change size */
+	margin-bottom: 20px;
+}
+
+[class*='col-']:last-of-type {
+	padding-right: 0;
+}
+
+.row:after {
+	content: ""; /* You have to this for any pseudo element before/after */
+	display: table;
+	clear: both;
+}
+
+.wrapper {
+	width: 75%;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+#events {
+	margin-bottom: 6rem;
+	overflow: hidden;
+	/* This is hiding the scroll bar that appears 
+	at the top of the Events page */
+} 
+
 #what-we-offer {
 	margin-top: 6rem;
 }
@@ -81,18 +112,19 @@ ul {
 
 
 
-/* 1.1 UTILITY CLASSES */
+
+/* 1.1 Utility Classes */
+
 .border-bottom {
 	border-bottom: 1px solid black;
 }
 
-.img-fullwidth {
-	width: 100%;
-	max-width: 525px;
-}
-
 .flex {
 	display: flex;
+}
+
+.relative {
+	position: relative;
 }
 
 .center {
@@ -103,21 +135,22 @@ ul {
 	text-align: right;
 }
 
-.relative {
-	position: relative;
-}
 
 
 
 
+/* 2.0 STRUCTURE */
 
-
-/* 2.0 SITE HEADER */
+/* 2.1 Site Header */
 
 .logo {
 	width: 80px;
 	margin: 0 auto 0.75rem auto;
 	display: block;
+}
+
+.main-nav {
+	margin-top: 2rem;
 }
 
 .main-nav > ul {
@@ -139,65 +172,7 @@ ul {
 
 
 
-
-/* 2.1 SITE FOOTER */
-
-footer {
-	display: flex;
-
-	padding: 4rem 0;
-}
-
-footer > div {
-	display: flex;
-	flex-direction: column;
-}
-
-footer > div:first-of-type, footer > div:last-of-type {
-	width: 20%;
-}
-
-footer > div:nth-of-type(2) {
-	width: 60%;
-}
-
-.footer-logo-container {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 8px;
-}
-
-#social-media-btn a {
-	padding-right: 1rem;
-}
-
-footer li {
-	padding-bottom: 0.25rem;
-}
-
-footer .logo {
-	width: 3rem;
-}
-
-footer h1 {
-	font-size: 1.25rem;
-}
-
-footer h1 ~ p {
-	font-size: 0.75rem;
-}
-
-footer > div:last-of-type {
-	text-align: right;
-}
-
-
-
-
-
-
-
-/* 3.0 TYPOGRAPHY */
+/* 2.2 Typography */
 
 h1 {
 	font-family: 'Josefin Sans', sans-serif;
@@ -221,7 +196,7 @@ h2 {
 	padding: 0 2rem;
 }
 
-#about h2 {
+#about h2, #events h2 {
 	font-size: 2rem;
 	letter-spacing: 2.25px;
 	padding: 0 2rem;
@@ -235,6 +210,16 @@ h3 {
 	letter-spacing: 2.83px;
 	line-height: 33px;
 }
+
+h4 {
+	font-family: 'Gibson', sans-serif;
+	font-size: 1.5rem;
+	color: #7d494b;
+	font-weight: 100;
+	letter-spacing: .01px;
+	text-transform: uppercase;
+	margin: 0;
+}/* This is the same as h5 */
 
 h5 {
 	font-family: 'Gibson', sans-serif;
@@ -259,6 +244,7 @@ h5, h6 {
 }
 
 p {
+	display: inline;
 	font-family: 'Gibson', sans-serif;
 	font-size: 1.15rem;
 	font-weight: 100;
@@ -268,7 +254,7 @@ p {
 	max-width: 446px;
 }
 
-#hero p, #about p{
+#hero p, #about p, #events p{
 	padding: 0 1rem;
 }
 
@@ -294,12 +280,18 @@ blockquote {
 	padding: 4rem 14rem;
 }
 
+.includes {
+	font-family: 'Cormorant Garamond', serif; 
+	font-size: 1rem;
+	font-style: italic;
+}
 
 
 
 
 
-/* 3.1 BUTTONS */
+
+/* 2.3 Buttons */
 
 .cta-btn {
     color: #86332C;
@@ -387,7 +379,24 @@ footer p {
 
 
 
-/* 3.2 MEDIA */
+/* 2.4 Media */
+
+.img-fullwidth {
+	width: 100%;
+	max-width: 525px;
+}
+
+.red-lines {
+	position: absolute;
+	top: 85%;
+	left: 80%;
+	width: 40%;
+}
+
+.card-underline {
+	width: 5rem;
+	border-bottom: 1px solid #7d494b;
+}
 
 .bg-gray-bar {
 	background-color: #f6f3f3;
@@ -426,6 +435,15 @@ footer p {
 	position: absolute;
 	top: 62%;
 	left: 17%;
+}
+
+#events img:nth-of-type(2) {
+	width: 32%;
+	min-width: 100px;
+
+	position: absolute;
+	top: 62%;
+	left: 27%;
 }
 
 #what-we-offer img {
@@ -474,7 +492,63 @@ footer p {
 
 
 
-/* >>>>>> CONTACT PAGE <<<<<< */
+
+
+/* 2.5 Site Footer */
+
+footer {
+	display: flex;
+
+	padding: 4rem 0;
+}
+
+footer > div {
+	display: flex;
+	flex-direction: column;
+}
+
+footer > div:first-of-type, footer > div:last-of-type {
+	width: 20%;
+}
+
+footer > div:nth-of-type(2) {
+	width: 60%;
+}
+
+footer li {
+	padding-bottom: 0.25rem;
+}
+
+footer .logo {
+	width: 3rem;
+}
+
+footer h1 {
+	font-size: 1.25rem;
+}
+
+footer h1 ~ p {
+	font-size: 0.75rem;
+}
+
+footer > div:last-of-type {
+	text-align: right;
+}
+
+.footer-logo-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 8px;
+}
+
+#social-media-btn a {
+	padding-right: 1rem;
+}
+
+
+
+
+/* 3.0 CONTACT PAGE */
 
 #map {
   height: 350px;
@@ -496,7 +570,12 @@ footer p {
 	margin-top: 15px;
 }
 
-/* >>>>>> EVENTS PAGE <<<<<< */
+
+
+
+
+
+/* 4.0 EVENTS PAGE */
 
 .address {
 	font-size: 1.25rem;
@@ -520,11 +599,11 @@ footer p {
 
  .packages-header:before {
     position: absolute;
-    top: 50%;
-    left: 10%;
+    top: 28%;
+    left: 16%;
     height: 1px;
-    width: 80%;
-    background-color: black;
+    width: 70%;
+    background-color: #000;
     content: '';
     z-index: 2;
 }
@@ -541,6 +620,8 @@ footer p {
 }
 
 .package-card {
+	background-color: #fff;
+
 	display: flex;
 	justify-content: space-between;
 }
@@ -553,7 +634,7 @@ footer p {
 
 
 
-/* COLUMNS */
+/* 5.0 COLUMN WIDTHS */
 
 /* ONE COLUMN */
 
@@ -679,11 +760,12 @@ footer p {
 
 
 
-/* TABLET SIZE */
+/* 6.0 TABLET SIZE */
 
 @media (max-width: 850px) {
 
-/* TABLET: Site Header */
+
+/* 6.1 Tablet Header */
 
 	.desktop-logo {
 		display: none;
@@ -694,25 +776,26 @@ footer p {
 		margin-top: 1em;
 	}
 
+/* 6.2 Tablet Structure */
 
-/* TABLET: Site Structure */
-/* TABLET: Site Footer */
-/* TABLET: Typography */
-/* TABLET: Buttons */
-/* TABLET: Media */
+/* 6.3 Tablet Typography */
+
+/* 6.4 Tablet Buttons */
+
+/* 6.5 Tablet Media */
+
+/* 6.6 Tablet Footer */
 
 }
 
 
 
 
-
-
-/* MOBILE SIZE */
+/* 7.0 MOBILE SIZE */
 
 @media (max-width: 480px) {
 
-/* MOBILE: Site Header */
+/* 7.1 Mobile Header */
 
 header {
 	margin-bottom: 2rem;
@@ -731,12 +814,7 @@ header {
 	padding: 0;
 }
 
-
-
-
-
-
-/* MOBILE: Site Structure */
+/* 7.2 Mobile Structure */
 
 .wrapper {
 	width: 100%;
@@ -751,12 +829,55 @@ header {
 	margin-top: 0;
 }
 
+/* 7.3 Mobile Typography */
+
+h2 {
+	padding: 0 1rem;
+	font-size: 2.65rem;
+	text-align: left;
+	margin-bottom: 3rem;
+	}
+
+#what-we-offer h3 {
+	padding-left: 2rem;
+}
+
+#what-we-offer p {
+	text-align: left;
+}
+
+p {
+	line-height: 2rem;
+	padding: 0 3rem;
+}
+
+blockquote {
+	font-size: 1.45rem;
+	letter-spacing: 0.73px;
+	line-height: 2.5rem;
+	margin: 0;
+	padding: 3rem;
+}
+
+/* 7.4 Mobile Buttons */
+
+/* 7.5 Mobile Media */
+
+img {
+	margin: 0 auto;
+	width: 100%;
+	}
+
+#about img:nth-of-type(2) {
+	display: none;
+}
 
 
+.bg-gray-bar {
+	display: none;
+}
 
-
-
-/* MOBILE: Site Footer */
+/* 7.6 Mobile Footer */
 
 footer {
 	display: flex;
@@ -789,69 +910,6 @@ footer > div:first-of-type, footer > div:last-of-type {
 #social-media-btn {
 	margin: 0 auto;
 	text-align: center;
-}
-
-
-
-
-
-/* MOBILE: Typography */
-
-h2 {
-	padding: 0 1rem;
-	font-size: 2.65rem;
-	text-align: left;
-	margin-bottom: 3rem;
-	}
-
-#what-we-offer h3 {
-	padding-left: 2rem;
-}
-
-#what-we-offer p {
-	text-align: left;
-}
-
-p {
-	line-height: 2rem;
-	padding: 0 3rem;
-}
-
-blockquote {
-	font-size: 1.45rem;
-	letter-spacing: 0.73px;
-	line-height: 2.5rem;
-	margin: 0;
-	padding: 3rem;
-}
-
-
-
-
-
-
-/* MOBILE: Buttons */
-
-
-
-
-
-
-
-/* MOBILE: Media */
-
-img {
-	margin: 0 auto;
-	width: 100%;
-	}
-
-#about img:nth-of-type(2) {
-	display: none;
-}
-
-
-.bg-gray-bar {
-	display: none;
 }
 
 }
