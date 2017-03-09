@@ -720,11 +720,28 @@ footer > div:last-of-type {
 	justify-content: space-between;
 }
 
-.package-card > div:first-of-type {
+#weddings .package-card:first-of-type > div:first-of-type {
 	background-repeat: no-repeat;
 	background-image: url(../img/talon-room-wedding.jpg);
-	background-size: cover;
+	background-size: contain;
 }
+
+#weddings .package-card:nth-of-type(2) > div:first-of-type {
+	background-repeat: no-repeat;
+	background-image: url(../img/chefauchef-wedding-special.jpg);
+	background-size: contain;
+}
+
+#business .package-card:first-of-type > div:first-of-type {
+	background-repeat: no-repeat;
+	background-image: url(../img/business.jpg);
+	background-size: contain;
+}
+
+
+
+
+
 
 
 
