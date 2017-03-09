@@ -375,8 +375,102 @@ footer p {
 }
 
 
+/* FORM */
 
 
+fieldset {
+	border: 0 none;
+	margin: 10px 200px; 
+  font-family: coromorant gramond, serif;
+  font-weight: 100;
+  font-size: 28px;
+  color: grey;
+}
+
+label {
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+label[for="fname"], label[for="lname"], label[for="phone"], label[for="email"], label[for="request"], label[for="budget"] {
+	display: none;
+}
+
+input, textarea, select {
+  	border: none;
+    background-color: #FAF8F7
+}
+
+#request {
+  background-color: #fff;
+  border-bottom: none;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+	margin-bottom: 50px;
+}
+
+#fname, #lname {
+  width: 29%;
+  display: inline-block;
+
+}
+
+form {
+	margin-top: 100px;
+  background-color: #FAF8F7;
+  padding: 40px;
+}
+
+form p {
+	margin-bottom: 10px;
+}
+
+
+select, input[type="text"], input[type="tel"], input[type="email"], textarea  {
+	width: 60%;
+	border-bottom: .5px solid grey;
+	padding: 10px;
+}
+
+select {
+    height: 30px;
+    font-weight: gibson;
+    font-weight: light;
+}
+
+select, input[type="radio"], input[type="checkbox"] {
+	margin: 0 5px 20px 0;
+  background: #fff;
+}
+
+#quantity, #type {
+	margin-bottom: 20px;
+}
+
+
+::-webkit-input-placeholder { 
+	  text-transform: uppercase;
+	  font-weight: light;
+    font-family: gibson; 
+ }
+::-moz-placeholder {
+	  text-transform: uppercase;
+	  font-weight: bold;
+}
+:-ms-input-placeholder { 
+	  text-transform: uppercase;
+	  font-weight: bold;
+}
+:-moz-placeholder { 
+	  text-transform: uppercase;
+	  font-weight: bold;
+}
+
+#time-limit {
+	 padding: 0px 100px 0 0;
+	 text-transform: none;
+}
 
 
 /* 2.4 Media */
