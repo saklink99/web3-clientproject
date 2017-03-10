@@ -97,6 +97,10 @@ ul {
 	overflow-x: hidden;
 }
 
+footer.wrapper {
+	width: 100%;
+}
+
 #events {
 	margin-bottom: 6rem;
 	overflow: hidden;
@@ -376,7 +380,30 @@ footer p {
 
 
 /* FORM */
+form > div:first-of-type {
+	display: flex;
+	justify-content: space-between;
+}
 
+#container.row {
+	display: flex;
+}
+
+#container {
+	align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+legend {
+	font: inherit;
+    font-weight: 100;
+    font-family: gibson;
+    text-transform: uppercase;
+    color: #333;
+    padding: 10px;
+}
 
 fieldset {
 	border: 0 none;
@@ -392,7 +419,7 @@ label {
     text-indent: -15px;
 }
 
-label[for="fname"], label[for="lname"], label[for="phone"], label[for="email"], label[for="request"], label[for="budget"] {
+label[for="fname"], label[for="lname"], label[for="phone"], label[for="email"], label[for="event"], label[for="message"], label[for="event-budget"], label[for="occasion"] {
 	display: none;
 }
 
@@ -401,7 +428,7 @@ input, textarea, select {
     background-color: #FAF8F7
 }
 
-#request {
+#message, #select {
   background-color: #fff;
   border-bottom: none;
 }
@@ -411,16 +438,20 @@ input[type="text"], input[type="tel"], input[type="email"], textarea {
 }
 
 #fname, #lname {
-  width: 29%;
+  width: 45%;
   display: inline-block;
 
 }
 
 form {
-	margin-top: 100px;
+  margin-top: 100px;
   background-color: #FAF8F7;
-  padding: 40px;
+  padding: 20px 30px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
 }
+
 
 form p {
 	margin-bottom: 10px;
@@ -428,7 +459,7 @@ form p {
 
 
 select, input[type="text"], input[type="tel"], input[type="email"], textarea  {
-	width: 60%;
+	width: 100%;
 	border-bottom: .5px solid grey;
 	padding: 10px;
 }
