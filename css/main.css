@@ -47,9 +47,13 @@ TABLE OF CONTENTS
 
 /* 1.0 BASE STYLES */
 
+.poop {
+	margin: 0;
+}
+
 html * {
-  padding: 0;
-  margin: 0;
+  	padding: 0;
+  	margin: 0;
 }
 
 *, *:after, *:before {
@@ -217,7 +221,7 @@ h3 {
 
 h4 {
 	font-family: 'Gibson', sans-serif;
-	font-size: 1.5rem;
+	font-size: 1.65rem;
 	color: #7d494b;
 	font-weight: 100;
 	letter-spacing: .01px;
@@ -282,12 +286,6 @@ blockquote {
 
 	margin: 5rem 0 0 1rem;
 	padding: 4rem 14rem;
-}
-
-.includes {
-	font-family: 'Cormorant Garamond', serif; 
-	font-size: 1rem;
-	font-style: italic;
 }
 
 
@@ -408,10 +406,10 @@ legend {
 fieldset {
 	border: 0 none;
 	margin: 10px 200px; 
-  font-family: coromorant gramond, serif;
-  font-weight: 100;
-  font-size: 28px;
-  color: grey;
+  	font-family: coromorant gramond, serif;
+  	font-weight: 100;
+  	font-size: 28px;
+  	color: grey;
 }
 
 label {
@@ -429,8 +427,8 @@ input, textarea, select {
 }
 
 #message, #select {
-  background-color: #fff;
-  border-bottom: none;
+  	background-color: #fff;
+  	border-bottom: none;
 }
 
 input[type="text"], input[type="tel"], input[type="email"], textarea {
@@ -438,18 +436,18 @@ input[type="text"], input[type="tel"], input[type="email"], textarea {
 }
 
 #fname, #lname {
-  width: 45%;
-  display: inline-block;
+  	width: 45%;
+  	display: inline-block;
 
 }
 
 form {
-  margin-top: 100px;
-  background-color: #FAF8F7;
-  padding: 20px 30px;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
+  	margin-top: 100px;
+  	background-color: #FAF8F7;
+  	padding: 20px 30px;
+  	width: 60%;
+  	display: flex;
+  	flex-direction: column;
 }
 
 
@@ -472,7 +470,7 @@ select {
 
 select, input[type="radio"], input[type="checkbox"] {
 	margin: 0 5px 20px 0;
-  background: #fff;
+  	background: #fff;
 }
 
 #quantity, #type {
@@ -481,26 +479,26 @@ select, input[type="radio"], input[type="checkbox"] {
 
 
 ::-webkit-input-placeholder { 
-	  text-transform: uppercase;
-	  font-weight: light;
+	text-transform: uppercase;
+	font-weight: light;
     font-family: gibson; 
  }
 ::-moz-placeholder {
-	  text-transform: uppercase;
-	  font-weight: bold;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 :-ms-input-placeholder { 
-	  text-transform: uppercase;
-	  font-weight: bold;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 :-moz-placeholder { 
-	  text-transform: uppercase;
-	  font-weight: bold;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 #time-limit {
-	 padding: 0px 100px 0 0;
-	 text-transform: none;
+	padding: 0px 100px 0 0;
+	text-transform: none;
 }
 
 
@@ -516,11 +514,6 @@ select, input[type="radio"], input[type="checkbox"] {
 	top: 85%;
 	left: 80%;
 	width: 40%;
-}
-
-.card-underline {
-	width: 5rem;
-	border-bottom: 1px solid #7d494b;
 }
 
 .bg-gray-bar {
@@ -578,40 +571,40 @@ select, input[type="radio"], input[type="checkbox"] {
 /* SLIDESHOW CONTAINER */
 
 .carousel {
-  max-width: 100%;
-  position: relative;
-  margin: 0 auto;
+  	max-width: 100%;
+  	position: relative;
+  	margin: 0 auto;
 }
 
 .dot {
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  	height: 13px;
+  	width: 13px;
+  	margin: 0 2px;
+  	background-color: #bbb;
+  	border-radius: 50%; /* Needs vendor prefix */
+  	display: inline-block;
+  	transition: background-color 0.6s ease;
 }
 
 .active {
-  background-color: #717171;
+  	background-color: #717171;
 }
 
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
 
@@ -623,7 +616,6 @@ select, input[type="radio"], input[type="checkbox"] {
 
 footer {
 	display: flex;
-
 	padding: 4rem 0;
 }
 
@@ -676,9 +668,9 @@ footer > div:last-of-type {
 /* 3.0 CONTACT PAGE */
 
 #map {
-  height: 350px;
-  margin-top: 15px;
-  width: 40%;
+  	height: 350px;
+  	margin-top: 15px;
+  	width: 40%;
 }
 
 .col-1-2 > h5 {
@@ -751,6 +743,48 @@ footer > div:last-of-type {
 	justify-content: space-between;
 }
 
+.includes {
+	font-family: 'Cormorant Garamond', serif; 
+	font-size: 1.35rem;
+	font-style: italic;
+	font-weight: 100;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.price {
+	font-size: 1.35rem;
+	color: #000;
+}
+
+.card-underline {
+	width: 5rem;
+	border-bottom: 1px solid #7d494b;
+	margin: 1rem 0;
+}
+
+.features {
+	font-family: 'Gibson', sans-serif; 
+	font-size: 1rem;
+	font-weight: 100;
+	padding-left: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+}
+
+.features li {
+	padding: 0.35rem 0;
+}
+
+.event-description {
+	font-family: 'Cormorant Garamond', serif; 
+	font-size: 1rem;
+	font-style: italic;
+	font-weight: 100;
+	display: block;
+	margin-left: 0;
+}
+
 #weddings .package-card:first-of-type > div:first-of-type {
 	background-repeat: no-repeat;
 	background-image: url(../img/talon-room-wedding.jpg);
@@ -768,6 +802,37 @@ footer > div:last-of-type {
 	background-image: url(../img/business.jpg);
 	background-size: contain;
 }
+
+#tailgates .package-card:first-of-type > div:first-of-type {
+	background-repeat: no-repeat;
+	background-image: url(../img/tailgate.jpg);
+	background-size: contain;
+}
+
+#aeries .package-card:first-of-type > div:first-of-type {
+	background-repeat: no-repeat;
+	background-image: url(../img/aeries.jpg);
+	background-size: contain;
+}
+
+#greek-life .package-card:first-of-type > div:first-of-type {
+	background-repeat: no-repeat;
+	background-image: url(../img/greek-formals.jpg);
+	background-size: contain;
+}
+
+#greek-life .package-card:nth-of-type(2) > div:first-of-type {
+	background-repeat: no-repeat;
+	background-image: url(../img/greek-life-events.jpg);
+	background-size: contain;
+}
+
+#wine-down-wednesday .package-card:first-of-type > div:first-of-type {
+	background-repeat: no-repeat;
+	background-image: url(../img/wine-down-wednesday.jpg);
+	background-size: contain;
+}
+
 
 
 
@@ -909,14 +974,15 @@ footer > div:last-of-type {
 
 /* 6.1 Tablet Header */
 
-	.desktop-logo {
-		display: none;
-	}
-	.tablet-logo-container {
-		display: flex;
-		justify-content: center;
-		margin-top: 1em;
-	}
+.desktop-logo {
+	display: none;
+}
+
+.tablet-logo-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+}
 
 /* 6.2 Tablet Structure */
 
@@ -978,7 +1044,7 @@ h2 {
 	font-size: 2.65rem;
 	text-align: left;
 	margin-bottom: 3rem;
-	}
+}
 
 #what-we-offer h3 {
 	padding-left: 2rem;
@@ -1008,7 +1074,7 @@ blockquote {
 img {
 	margin: 0 auto;
 	width: 100%;
-	}
+}
 
 #about img:nth-of-type(2) {
 	display: none;
