@@ -741,6 +741,7 @@ footer > div:last-of-type {
 
 	display: flex;
 	justify-content: space-between;
+	margin: 3rem 1rem;
 }
 
 .includes {
@@ -833,7 +834,52 @@ footer > div:last-of-type {
 	background-size: contain;
 }
 
+#bar-options h2 {
+	font-family: 'Gibson', sans-serif;
+	font-size: 2.65rem;
+	color: #7d494b;
+	font-weight: 100;
+	letter-spacing: 4.01px;
+	text-transform: uppercase;
+	text-align: center;
+}
 
+th {
+	font-family: 'Gibson', sans-serif;
+	font-size: 1rem;
+	color: #7d494b;
+	font-weight: 100;
+	text-transform: uppercase;
+	text-align: left;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid #7d494b;
+}
+
+td {
+	font-family: 'Gibson', sans-serif;
+	font-size: 1rem;
+	color: #000;
+	font-weight: 100;
+	text-align: left;
+}
+
+tbody tr:nth-of-type(4) {
+	border-bottom: 1px solid #7d494b;
+}
+
+.drink-price {
+	padding-left: 2rem;
+}
+
+.beverage-type {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1rem;
+	color: #000;
+	font-weight: 100;
+	text-transform: uppercase;
+	text-align: left;
+	padding-top: 0.5rem;
+}
 
 
 
