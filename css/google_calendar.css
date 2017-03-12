@@ -13,10 +13,6 @@ img[title="Print my calendar (shows preview)"],
 .mv-event-container
 {border-color:#999;}
 
-.navBack,
-.navForward
-{ background-image: url(images/combined_v22.png); }
-
 .agenda-more
 { color:#0D75BB; }
 .agenda .date-label
@@ -49,6 +45,9 @@ img[title="Print my calendar (shows preview)"],
 .agenda .date-label
 {background-color:#efefef;}
 
+
+/* Nav buttons: .navBack1, .navForward1 (replace img) */
+
 .dp-today-selected
 {background-color:#bf9fb2;}
 
@@ -73,3 +72,49 @@ img[title="Print my calendar (shows preview)"],
 
 .mv-event-container
 { top:30px;}
+
+
+
+/********************* FONTS *********************/
+
+.today-button /*Today button*/, #currentDate1 /*Current Date*/, .mv-dayname /*Sun-Sat*/, .st-dtitle span /*dates in month 1-31*/, .st-c span /*Entries in calendar*/
+{
+	font-family: 'Gibson', sans-serif; 	
+	font-weight: 300;
+}
+
+.today-button /*Today button*/, #currentDate1 /*Current Date*/, .mv-dayname /*Sun-Sat*/, .st-dtitle span /*dates in month 1-31*/ {
+	font-size: 1rem;
+}
+
+.st-c /*Entries in calendar*/
+{
+	font-size: 1rem;
+	padding: 3px;
+}
+
+.st-dtitle span /*dates in month 1-31*/
+{
+	display: inline-block;
+	padding: 7px;
+}
+
+.today-button {
+	padding: 2px 15px;
+	border: 0.25px solid #ccc;
+	background-color: #fff;
+}
+
+
+#timezone
+{
+	display: none;
+}
+
+@media (max-width: 480px) {
+.st-c /*Entries in calendar*/
+{
+	font-size: .8rem;
+	padding: 3px;
+}
+}

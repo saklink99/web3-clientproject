@@ -15,6 +15,7 @@ TABLE OF CONTENTS
 	2.4 Media
 	2.5 Site Footer
 
+2.9 HOME PAGE
 3.0 CONTACT PAGE
 4.0 EVENTS PAGE
 
@@ -101,7 +102,7 @@ ul {
 	overflow-x: hidden;
 }
 
-footer.wrapper {
+footer {
 	width: 100%;
 }
 
@@ -195,19 +196,23 @@ h1 {
 
 h2 {
 	font-family:'Cormorant Garamond', serif; 
-	font-size: 2.75rem;
+	font-size: 2.6rem;
 	font-weight: 400;
 	letter-spacing: 3px;
 	color: #86332C;
-
 	margin-bottom: 4rem;
 	padding: 0 2rem;
+}
+
+#hero h2 {
+	margin-top: 2.5rem;
+	margin-bottom: 4.5rem;
+	padding: 0 0 0 2rem;
 }
 
 #about h2, #events h2 {
 	font-size: 2rem;
 	letter-spacing: 2.25px;
-	padding: 0 2rem;
 }
 
 h3 {
@@ -219,6 +224,9 @@ h3 {
 	line-height: 33px;
 }
 
+#contact h3 {
+	margin-top: 4rem;
+}
 h4 {
 	font-family: 'Gibson', sans-serif;
 	font-size: 1.65rem;
@@ -252,7 +260,6 @@ h5, h6 {
 }
 
 p {
-	display: inline;
 	font-family: 'Gibson', sans-serif;
 	font-size: 1.15rem;
 	font-weight: 100;
@@ -279,10 +286,10 @@ h1 ~ p {
 blockquote {
 	background-color: #f6f3f3;
 	font-family: 'Cormorant Garamond', serif; 
-	font-size: 2.75rem;
+	font-size: 2.5rem;
 	font-weight: 300;
 	letter-spacing: 0.73px;
-	line-height: 4.5rem;
+	line-height: 4rem;
 
 	margin: 5rem 0 0 1rem;
 	padding: 4rem 14rem;
@@ -302,10 +309,15 @@ blockquote {
     display: block;
     text-decoration: none;
     text-align: center;
-
-    width: 90%;
     margin: 2rem auto 0 auto;
     max-width: 300px;
+}
+
+form .cta-btn {
+	margin: 0;
+}
+form p {
+	margin: 0;
 }
 
 .cta-btn:hover {
@@ -356,6 +368,7 @@ footer h6.center ~ p {
 }
 
 footer p {
+	display: block;
 	font-size: 0.75rem;
 	line-height: 1.15rem;
 }
@@ -383,11 +396,15 @@ form > div:first-of-type {
 	justify-content: space-between;
 }
 
-#container.row {
+form {
+	margin-bottom: 4rem;
+}
+
+#form-container.row {
 	display: flex;
 }
 
-#container {
+#form-container {
 	align-items: center;
     display: flex;
     justify-content: center;
@@ -504,9 +521,11 @@ select, input[type="radio"], input[type="checkbox"] {
 
 /* 2.4 Media */
 
+
 .img-fullwidth {
 	width: 100%;
 	max-width: 525px;
+	min-width: 350px;
 }
 
 .red-lines {
@@ -532,9 +551,13 @@ select, input[type="radio"], input[type="checkbox"] {
 	position: static;
 }
 
+#hero img {
+	margin-top: -50px;
+}
+
 #hero > .bg-gray-bar {
-	top: 40%;
 	right: 0;
+	height: 205px;
 }
 
 #home-stamp {
@@ -553,6 +576,11 @@ select, input[type="radio"], input[type="checkbox"] {
 	position: absolute;
 	top: 62%;
 	left: 17%;
+}
+
+#googleCalendar {
+	width: 100%;
+	height: 900px;
 }
 
 #events img:nth-of-type(2) {
@@ -625,12 +653,13 @@ footer > div {
 }
 
 footer > div:first-of-type, footer > div:last-of-type {
-	width: 20%;
+	width: 11rem;
 }
 
 footer > div:nth-of-type(2) {
-	width: 60%;
+	width: 100%;
 }
+
 
 footer li {
 	padding-bottom: 0.25rem;
@@ -648,6 +677,10 @@ footer h1 ~ p {
 	font-size: 0.75rem;
 }
 
+footer h4 {
+	font-size: 1rem;
+}
+
 footer > div:last-of-type {
 	text-align: right;
 }
@@ -663,6 +696,15 @@ footer > div:last-of-type {
 }
 
 
+/* 2.9 HOME PAGE */
+
+#what-we-offer h3 {
+	padding: 30px 0;
+}
+
+#what-we-offer p {
+	line-height: 2rem;
+}
 
 
 /* 3.0 CONTACT PAGE */
@@ -687,8 +729,9 @@ footer > div:last-of-type {
 	margin-top: 15px;
 }
 
-
-
+#addressWrapper {
+	padding: 4rem 0;
+}
 
 
 
@@ -1015,7 +1058,7 @@ tbody tr:nth-of-type(4) {
 
 /* 6.0 TABLET SIZE */
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
 
 
 /* 6.1 Tablet Header */
@@ -1031,6 +1074,24 @@ tbody tr:nth-of-type(4) {
 }
 
 /* 6.2 Tablet Structure */
+
+.wrapper {
+	width: 95%;
+}
+
+#addressWrapper {
+	width: 100%;
+}
+
+#map {
+	width: 100%;
+}
+
+#googleCalendar {
+	width: 100%;
+	height: 600px;
+}
+
 
 /* 6.3 Tablet Typography */
 
@@ -1092,6 +1153,22 @@ h2 {
 	margin-bottom: 3rem;
 }
 
+#contact h2, #form-container h2 {
+	font-size: 2.25rem;
+}
+
+#contact h5, #contact h3 {
+	padding: 0 1rem;
+}
+
+#contact .cta-btn {
+	margin-bottom: 3rem;
+}
+
+form {
+	width: 100%;
+}
+
 #what-we-offer h3 {
 	padding-left: 2rem;
 }
@@ -1100,9 +1177,10 @@ h2 {
 	text-align: left;
 }
 
+
 p {
 	line-height: 2rem;
-	padding: 0 3rem;
+	padding: 0 1rem;
 }
 
 blockquote {
@@ -1157,13 +1235,14 @@ footer > div:last-of-type {
 	text-align: center;
 }
 
-footer > div:first-of-type, footer > div:last-of-type {
-	width: 100%;
-}
-
 #social-media-btn {
 	margin: 0 auto;
 	text-align: center;
 }
 
+
+#googleCalendarWrapper
+{
+	overflow:scroll;
+}
 }
