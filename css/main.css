@@ -265,7 +265,7 @@ p {
 	font-weight: 100;
 	letter-spacing: 1.05px;
 	line-height: 1.75rem;
-	margin: 0 auto;
+	margin: 0;
 	max-width: 446px;
 }
 
@@ -745,6 +745,16 @@ footer > div:last-of-type {
  	margin-bottom: 20px;
  }
 
+#menu-item-active {
+	display: block;
+	animation: fade-in 1s;
+}
+
+/* by default, we will hide all of our packages */
+.menu-item {
+  display: none;
+}
+
  #packages {
  	padding: 4rem;
  	position: relative;
@@ -784,7 +794,8 @@ footer > div:last-of-type {
 
 	display: flex;
 	justify-content: space-between;
-	margin: 3rem 1rem;
+	margin: 1rem auto 1rem auto;
+	width: 60%;
 }
 
 .includes {
@@ -832,49 +843,65 @@ footer > div:last-of-type {
 #weddings .package-card:first-of-type > div:first-of-type {
 	background-repeat: no-repeat;
 	background-image: url(../img/talon-room-wedding.jpg);
-	background-size: contain;
+	background-size: 100%;
+	background-position: right;
+	margin-right: 30px;
 }
 
 #weddings .package-card:nth-of-type(2) > div:first-of-type {
 	background-repeat: no-repeat;
 	background-image: url(../img/chefauchef-wedding-special.jpg);
-	background-size: contain;
+	background-size: 100%;
+	background-position: right;
+	margin-right: 30px;
 }
 
 #business .package-card:first-of-type > div:first-of-type {
 	background-repeat: no-repeat;
 	background-image: url(../img/business.jpg);
-	background-size: contain;
+	background-size: 100%;
+	background-position: right;
+	margin-right: 30px;
 }
 
 #tailgates .package-card:first-of-type > div:first-of-type {
 	background-repeat: no-repeat;
 	background-image: url(../img/tailgate.jpg);
-	background-size: contain;
+	background-size: 100%;
+	background-position: right;
+	margin-right: 30px;
 }
 
 #aeries .package-card:first-of-type > div:first-of-type {
 	background-repeat: no-repeat;
 	background-image: url(../img/aeries.jpg);
-	background-size: contain;
+	background-size: 100%;
+	background-position: right;
+	margin-right: 30px;
 }
 
 #greek-life .package-card:first-of-type > div:first-of-type {
 	background-repeat: no-repeat;
 	background-image: url(../img/greek-formals.jpg);
-	background-size: contain;
+	background-size: 100%;
+	background-position: right;
+	margin-right: 30px;
 }
 
 #greek-life .package-card:nth-of-type(2) > div:first-of-type {
 	background-repeat: no-repeat;
 	background-image: url(../img/greek-life-events.jpg);
-	background-size: contain;
+	background-size: 100%;
+	background-position: right;
+	margin-right: 30px;
 }
 
 #wine-down-wednesday .package-card:first-of-type > div:first-of-type {
 	background-repeat: no-repeat;
 	background-image: url(../img/wine-down-wednesday.jpg);
-	background-size: contain;
+	background-size: 100%;
+	background-position: right;
+	margin-right: 30px;
 }
 
 #bar-options h2 {
@@ -909,6 +936,11 @@ td {
 tbody tr:nth-of-type(4) {
 	border-bottom: 1px solid #7d494b;
 }
+
+.space{
+	padding: 0 1rem;
+}
+
 
 .drink-price {
 	padding-left: 2rem;
