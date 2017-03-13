@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@charset "UTF-8";
-
 /*
 
 >>>>>> TABLE OF CONTENTS <<<<<<
@@ -10,38 +8,62 @@
 
 1.0 - T Y P O G R A P H Y
 
-1.1 - Headings
-1.2 - Body Copy
-1.3 - Buttons
-1.4 - Forms
-1.5 - Lists
-1.6 - Tables
+	1.1 - Headings
+	1.2 - Body Copy
+	1.3 - Buttons
+	1.4 - Forms
+	1.5 - Lists
+	1.6 - Tables
 
 2.0 - N A V I G A T I O N  M E N U S
 
-2.1 - Main
-2.2 - Sub
-2.3 - Footer
+	2.1 - Main
+	2.2 - Sub
+	2.3 - Footer
 
 3.0 - C O N T E N T
 
-3.1 - Site Structure
-3.2- Site Header
-3.3- Site Footer
+	3.1 - Site Structure
+	3.2- Site Header
+	3.3 - Site Footer
+	3.4 - Event Cards
 
 4.0 - M E D I A
 
-4.1 - Carousel
-4.2- TBD
-4.3- TBD
+	4.1 - Carousel
 
 5.0 - U T I L I Y
 
-6.0 - A N I M A T I O N S
+6.0 - T A B L E T  S I Z E
+
+	6.1 - Tablet Header
+	6.2 - Tablet Structure
+	6.3 - Tablet Typography
+	6.4 - Tablet Buttons
+	6.5 - Tablet Media
+	6.6 - Tablet Footer
+
+7.0 - M O B I L E  S I Z E
+
+	7.1 - Mobile Header
+	7.2 - Mobile Structure
+	7.3 - Mobile Typography
+	7.4 - Mobile Buttons
+	7.5 - Mobile Media
+	7.6 - Mobile Footer
+	
 
 ===========================================
 
 */
+
+
+
+
+
+
+
+
 
 /* >>>>>> 1.0   T Y P O G R A P H Y  <<<<<< */
 
@@ -89,10 +111,6 @@ h2 {
 	text-align: center;
 }
 
-#what-we-offer h3 {
-	padding: 30px 0;
-}
-
 h3 {
 	font-family:'Cormorant Garamond', serif;
 	font-size: 36px;
@@ -100,6 +118,10 @@ h3 {
 	font-style: italic;
 	letter-spacing: 2.83px;
 	line-height: 33px;
+}
+
+#what-we-offer h3 {
+	padding: 30px 0;
 }
 
 #contact h3 {
@@ -141,6 +163,14 @@ h6 {
 h5, h6 {
 	padding-bottom: 0.25rem;
 }
+
+
+
+
+
+
+
+
 
 /* XXXXXX 1.2 Body Copy XXXXXX */
 
@@ -188,6 +218,23 @@ blockquote {
 	margin: 0 auto;
 	max-width: 100%;
 }
+
+footer h6.center ~ p {
+	font-size: 0.75rem;
+}
+
+footer p {
+	display: block;
+	font-size: 0.75rem;
+	line-height: 1.15rem;
+}
+
+
+
+
+
+
+
 
 
 /* XXXXXX 1.3 Buttons XXXXXX */
@@ -246,16 +293,6 @@ footer h6.right a {
 	text-transform: none;
 }/* This makes Matt's email lowercase */
 
-footer h6.center ~ p {
-	font-size: 0.75rem;
-}
-
-footer p {
-	display: block;
-	font-size: 0.75rem;
-	line-height: 1.15rem;
-}
-
 #social-media-btn {
 	width: 100px;
 	font-size: 1.75rem;
@@ -272,7 +309,51 @@ footer p {
 	color: #e4e4e4;
 }
 
+
+
+
+
+
+
+
+
 /* XXXXXX 1.4 Forms XXXXXX */
+
+#form-container.row {
+	display: flex;
+}
+
+#form-container {
+	align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#message, #select {
+  	background-color: #fff;
+  	border-bottom: none;
+}
+
+#name {
+	font-size: 1.5rem;
+	color: #86332C;
+	margin-top: 15px;
+}
+
+#quantity, #type {
+	margin-bottom: 20px;
+}
+
+#fname, #lname {
+  	width: 45%;
+  	display: inline-block;
+}
+
+#time-limit {
+	padding: 0px 100px 0 0;
+	text-transform: none;
+}
 
 form > div:first-of-type {
 	display: flex;
@@ -289,17 +370,6 @@ form .cta-btn {
 
 form p {
 	margin: 0;
-}
-
-#form-container.row {
-	display: flex;
-}
-
-#form-container {
-	align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 100%;
 }
 
 legend {
@@ -334,19 +404,8 @@ input, textarea, select {
     background-color: #FAF8F7
 }
 
-#message, #select {
-  	background-color: #fff;
-  	border-bottom: none;
-}
-
 input[type="text"], input[type="tel"], input[type="email"], textarea {
 	margin-bottom: 50px;
-}
-
-#fname, #lname {
-  	width: 45%;
-  	display: inline-block;
-
 }
 
 form {
@@ -370,8 +429,8 @@ select, input[type="text"], input[type="tel"], input[type="email"], textarea  {
 
 select {
     height: 30px;
-    font-weight: gibson;
-    font-weight: light;
+	font-family: 'Gibson', sans-serif;
+    font-weight: 100;
 }
 
 select, input[type="radio"], input[type="checkbox"] {
@@ -379,64 +438,47 @@ select, input[type="radio"], input[type="checkbox"] {
   	background: #fff;
 }
 
-#name {
-	font-size: 1.5rem;
-	color: #86332C;
-	margin-top: 15px;
-}
-
-#quantity, #type {
-	margin-bottom: 20px;
-}
-
 ::-webkit-input-placeholder { 
 	text-transform: uppercase;
-	font-weight: light;
-    font-family: gibson; 
+	font-weight: 100;
+    font-family: 'Gibson', sans-serif; 
  }
 ::-moz-placeholder {
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 100;
 }
 :-ms-input-placeholder { 
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 100;
 }
 :-moz-placeholder { 
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 100;
 }
 
-#time-limit {
-	padding: 0px 100px 0 0;
-	text-transform: none;
-}
+
+
+
+
+
+
+
 
 /* XXXXXX 1.5 Lists XXXXXX */
+
+
+
+
+
+
+
+
+
 /* XXXXXX 1.6 Tables XXXXXX */
 
 table {
 	width: 50%;
 	float: left;
-}
-
-.beverage-type {
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 1rem;
-	color: #000;
-	font-weight: 100;
-	text-transform: uppercase;
-	text-align: left;
-	letter-spacing: 4px;
-}
-
-.table-footnote {
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 13px;
-	color: #000;
-	letter-spacing: 0.2px;
-	font-style: italic;
-	font-weight: 100;
 }
 
 th {
@@ -459,11 +501,82 @@ td {
 	padding: 7px 0;
 }
 
-/* >>>>>> 2.0  N A V I G A T I O N   M E N U S <<<<<< */
+.beverage-type {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1rem;
+	color: #000;
+	font-weight: 100;
+	text-transform: uppercase;
+	text-align: left;
+	letter-spacing: 4px;
+}
+
+.table-footnote {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 13px;
+	color: #000;
+	letter-spacing: 0.2px;
+	font-style: italic;
+	font-weight: 100;
+}
+
+ .table-price {
+ 	text-align: right;
+ }
+
+
+
+
+
+
+
+
+
+ /* >>>>>> 2.0  N A V I G A T I O N   M E N U S <<<<<< */
 
 /* XXXXXX 2.1 Main XXXXXX */
+
+.main-nav {
+	margin-top: 2rem;
+}
+
+.main-nav > ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mobile-nav, .mobile-btn-wrapper {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
 /* XXXXXX 2.2 Sub  XXXXXX */
+
+
+
+
+
+
+
+
+
 /* XXXXXX 2.3 Footer XXXXXX */
+
+
+
+
+
+
+
+
 
 /* >>>>>> 3.0  C O N T E N T <<<<<< */
 
@@ -522,351 +635,6 @@ ul {
 	overflow: hidden;
 	/* This is hiding the scroll bar that appears 
 	at the top of the Events page */
-} 
-
-#what-we-offer {
-	margin-top: 6rem;
-}
-
-#addressWrapper {
-	padding: 4rem 0;
-}
-
-/* XXXXXX 3.2 Site Header XXXXXX */
-
-header {
-	margin-bottom: 5rem;
-	padding: 0;
-}
-
-.logo {
-	width: 80px;
-	margin: 0 auto 0.75rem auto;
-	display: block;
-}
-
-.main-nav {
-	margin-top: 2rem;
-}
-
-.main-nav > ul {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.mobile-nav, .mobile-btn-wrapper {
-	display: none;
-}
-
-.tablet-logo-container {
-	display: none;
-}
-
-
-/* XXXXXX 3.3 Site Footer XXXXXX */
-
-footer {
-	width: 100%;
-}
-
-footer {
-	display: flex;
-	padding: 4rem 0;
-}
-
-footer > div {
-	display: flex;
-	flex-direction: column;
-}
-
-footer > div:first-of-type, footer > div:last-of-type {
-	width: 11rem;
-}
-
-footer > div:nth-of-type(2) {
-	width: 100%;
-}
-
-footer li {
-	padding-bottom: 0.25rem;
-}
-
-footer .logo {
-	width: 3rem;
-}
-
-footer h1 {
-	font-size: 1.25rem;
-}
-
-footer h1 ~ p {
-	font-size: 0.75rem;
-}
-
-footer h4 {
-	font-size: 1rem;
-}
-
-footer > div:last-of-type {
-	text-align: right;
-}
-
-.footer-logo-container {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 8px;
-}
-
-#social-media-btn a {
-	padding-right: 1rem;
-}
-
-.col-1-2 a {
-    text-decoration: none;
-    color: #000000;
-}
-
-/* >>>>>> 4.0  M E D I A <<<<<< */
-
-#map {
-  	height: 350px;
-  	margin-top: 15px;
-  	width: 40%;
-}
-
-.img-fullwidth {
-	width: 100%;
-	max-width: 525px;
-	min-width: 350px;
-}
-
-.red-lines {
-	position: absolute;
-	top: 85%;
-	left: 80%;
-	width: 40%;
-}
-
-.bg-gray-bar {
-	background-color: #f6f3f3;
-	height: 190px;
-	width: 100%;
-	z-index: -1;
-	position: absolute;
-}
-
-.bg-gray {
-	background-color: #f6f3f3;
-}
-
-#hero {
-	position: static;
-}
-
-#hero img {
-	margin-top: -50px;
-}
-
-#hero > .bg-gray-bar {
-	right: 0;
-	height: 205px;
-}
-
-#home-stamp {
-	width: 35%;
-	min-width: 200px;
-	
-	position: absolute;
-	top: 61%;
-    left: 63%;
-}
-
-#about img:nth-of-type(2) {
-	width: 32%;
-	min-width: 100px;
-
-	position: absolute;
-	top: 62%;
-	left: 17%;
-}
-
-#googleCalendar {
-	width: 100%;
-	height: 900px;
-}
-
-#events img:nth-of-type(2) {
-	width: 32%;
-	min-width: 100px;
-
-	position: absolute;
-	top: 62%;
-	left: 27%;
-}
-
-#what-we-offer img {
-	margin-left: 5rem;
-}/* This is moving the floor plan inwards */
-
-/* XXXXXX 4.1 Carousel XXXXXX */
-
-@-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-.carousel {
-  	max-width: 100%;
-  	position: relative;
-  	margin: 0 auto;
-}
-
-.dot {
-  	height: 13px;
-  	width: 13px;
-  	margin: 0 2px;
-  	background-color: #bbb;
-  	border-radius: 50%; /* Needs vendor prefix */
-  	display: inline-block;
-  	transition: background-color 0.6s ease;
-}
-
-.active {
-  	background-color: #717171;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-/* XXXXXX 4.2 Event Cards XXXXXX */
-
-@-webkit-keyframes fade-in {
-
-    0% { 
-    	opacity: 0;
-	}
-
-    100% { 
-    	opacity: 1; 
-    }
-}
-
-#business, 
-#tailgates, 
-#aeries, 
-#greek-life,
-#wine-down-wednesday  {
-    left: -5550px;
-    width: -5550px;
-    -webkit-animation: face-in 0.5s forwards;
-    -webkit-animation-delay: 2s;
-    animation: fade-in 0.5s forwards;
-}
-
-
-/* >>>>>> 5.0  U T I L I T Y <<<<<< */
-
-.border-bottom {
-	border-bottom: 1px solid black;
-}
-
-.flex {
-	display: flex;
-}
-
-.relative {
-	position: relative;
-}
-
-.center {
-	text-align: center;
-}
-
-.right {
-	text-align: right;
-}
-
-/* >>>>>> 6.0  A N I M A T I O N S <<<<<< */
-
-
-.package-card {
-	background-color: #fff;
-
-	display: flex;
-	justify-content: space-between;
-	margin: 1rem auto;
-	width: 70%;
-	padding: 3rem;
-}
-
-/* By default, we will hide all of our packages */
-.menu-item {
-  	display: none;
-}
-
-
-/* DROP DOWN STYLING STARTS HERE */
-
-#packages select {
-	font-family: 'Gibson', sans-serif; 
-	font-size: 1rem;
-	font-weight: 100;
-	padding-left: 1rem;
-	text-transform: uppercase;
-	letter-spacing: 0.75px;
-	background-color: #f6f3f3;
-	border-bottom: none;
-}
-
-select:focus {
-	outline: 0;
-}
-
-#packages .select {
-  display:flex;
-  flex-direction: column;
-  position:relative;
-  width:250px;
-  height:40px;
-  padding-left: 30px;
-}
-
-#packages .option {
-  padding:0 30px 0 10px;
-  min-height:40px;
-  display:flex;
-  align-items:center;
-  background:#333;
-  border-top:#222 solid 1px;
-  position:absolute;
-  top:0;
-  width: 100%;
-  pointer-events:none;
-  order:2;
-  z-index:1;
-  transition:background .4s ease-in-out;
-  box-sizing:border-box;
-  overflow:hidden;
-  white-space:nowrap;
-}
-
-#packages .option:hover {
-  background:#666;
-}
-
-#packages .select:focus .option {
-  position:relative;
-  pointer-events:all;
 }
 
 .address {
@@ -875,10 +643,6 @@ select:focus {
 }
  .address:nth-child(3) {
  	margin-bottom: 20px;
- }
-
- .table-price {
- 	text-align: right;
  }
 
  #packages {
@@ -955,6 +719,167 @@ select:focus {
 	font-weight: 100;
 	display: block;
 	margin-left: 0;
+}
+
+.package-card {
+	background-color: #fff;
+
+	display: flex;
+	justify-content: space-between;
+	margin: 1rem auto;
+	width: 70%;
+	padding: 3rem;
+}
+
+#hero {
+	position: static;
+}
+
+#what-we-offer {
+	margin-top: 6rem;
+}
+
+#addressWrapper {
+	padding: 4rem 0;
+}
+
+
+
+
+
+
+
+
+
+/* XXXXXX 3.2 Site Header XXXXXX */
+
+header {
+	margin-bottom: 5rem;
+	padding: 0;
+}
+
+.logo {
+	width: 80px;
+	margin: 0 auto 0.75rem auto;
+	display: block;
+}
+
+.tablet-logo-container {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+/* XXXXXX 3.3 Site Footer XXXXXX */
+
+footer {
+	width: 100%;
+}
+
+footer {
+	display: flex;
+	padding: 4rem 0;
+}
+
+footer > div {
+	display: flex;
+	flex-direction: column;
+}
+
+footer > div:first-of-type, footer > div:last-of-type {
+	width: 11rem;
+}
+
+footer > div:nth-of-type(2) {
+	width: 100%;
+}
+
+footer li {
+	padding-bottom: 0.25rem;
+}
+
+footer .logo {
+	width: 3rem;
+}
+
+footer h1 {
+	font-size: 1.25rem;
+}
+
+footer h1 ~ p {
+	font-size: 0.75rem;
+}
+
+footer h4 {
+	font-size: 1rem;
+}
+
+footer > div:last-of-type {
+	text-align: right;
+}
+
+.footer-logo-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 8px;
+}
+
+#social-media-btn a {
+	padding-right: 1rem;
+}
+
+.col-1-2 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+/* XXXXXX 3.4 Event Cards XXXXXX */
+
+@-webkit-keyframes fade-in {
+
+    0% { 
+    	opacity: 0;
+	}
+
+    100% { 
+    	opacity: 1; 
+    }
+}
+
+@keyframes fade-in {
+
+     0% { 
+    	opacity: 0;
+	}
+
+    100% { 
+    	opacity: 1; 
+    }
+}
+
+#business, 
+#tailgates, 
+#aeries, 
+#greek-life,
+#wine-down-wednesday  {
+    left: -5550px;
+    -webkit-animation: face-in 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: fade-in 0.5s forwards;
 }
 
 #weddings .package-card:first-of-type > div:first-of-type {
@@ -1045,6 +970,220 @@ select:focus {
 
 
 
+/* >>>>>> 4.0  M E D I A <<<<<< */
+
+.img-fullwidth {
+	width: 100%;
+	max-width: 525px;
+	min-width: 350px;
+}
+
+.red-lines {
+	position: absolute;
+	top: 85%;
+	left: 80%;
+	width: 40%;
+}
+
+.bg-gray-bar {
+	background-color: #f6f3f3;
+	height: 190px;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+}
+
+.bg-gray {
+	background-color: #f6f3f3;
+}
+
+#hero img {
+	margin-top: -50px;
+}
+
+#hero > .bg-gray-bar {
+	right: 0;
+	height: 205px;
+}
+
+#home-stamp {
+	width: 35%;
+	min-width: 200px;
+	
+	position: absolute;
+	top: 61%;
+    left: 63%;
+}
+
+#about img:nth-of-type(2) {
+	width: 32%;
+	min-width: 100px;
+
+	position: absolute;
+	top: 62%;
+	left: 17%;
+}
+
+#googleCalendar {
+	width: 100%;
+	height: 900px;
+}
+
+#map {
+  	height: 350px;
+  	margin-top: 15px;
+  	width: 40%;
+}
+
+#events img:nth-of-type(2) {
+	width: 32%;
+	min-width: 100px;
+
+	position: absolute;
+	top: 62%;
+	left: 27%;
+}/* This is the smaller wine glass image */
+
+#what-we-offer img {
+	margin-left: 5rem;
+}/* This is moving the floor plan inwards */
+
+
+
+
+
+
+
+
+
+/* XXXXXX 4.1 Carousel XXXXXX */
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.carousel {
+  	max-width: 100%;
+  	position: relative;
+  	margin: 0 auto;
+}
+
+.dot {
+  	height: 13px;
+  	width: 13px;
+  	margin: 0 2px;
+  	background-color: #bbb;
+  	border-radius: 50%; /* Needs vendor prefix */
+  	display: inline-block;
+  	transition: background-color 0.6s ease;
+}
+
+.active {
+  	background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
+
+
+
+
+
+
+
+/* >>>>>> 5.0  U T I L I T Y <<<<<< */
+
+.border-bottom {
+	border-bottom: 1px solid black;
+}
+
+.flex {
+	display: flex;
+}
+
+.relative {
+	position: relative;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.menu-item {
+  	display: none;
+}/* By default, we will hide all of our packages */
+
+
+
+
+
+
+
+
+
+/* DROP DOWN STYLING STARTS HERE...TO BE STYLED/ORGANIZED */
+
+#packages select {
+	font-family: 'Gibson', sans-serif; 
+	font-size: 1rem;
+	font-weight: 100;
+	padding-left: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+	background-color: #f6f3f3;
+	border-bottom: none;
+}
+
+select:focus {
+	outline: 0;
+}
+
+#packages .select {
+  display:flex;
+  flex-direction: column;
+  position:relative;
+  width:250px;
+  height:40px;
+  padding-left: 30px;
+}
+
+#packages .option {
+  padding:0 30px 0 10px;
+  min-height:40px;
+  display:flex;
+  align-items:center;
+  background:#333;
+  border-top:#222 solid 1px;
+  position:absolute;
+  top:0;
+  width: 100%;
+  order:2;
+  z-index:1;
+  transition:background .4s ease-in-out;
+  box-sizing:border-box;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+#packages .option:hover {
+  background:#666;
+}
 
 
 
@@ -1083,7 +1222,25 @@ select:focus {
 
 
 
-/* 5.0 COLUMN WIDTHS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 5.0 COLUMN WIDTHS - DELETE ONCE COMPLETE */
 
 /* ONE COLUMN */
 
@@ -1209,12 +1366,18 @@ select:focus {
 
 
 
-/* 6.0 TABLET SIZE */
+
+
+
+
+
+
+/* >>>>>> 6.0   T A B L E T  S I Z E  <<<<<< */
 
 @media (max-width: 1050px) {
 
 
-/* 6.1 Tablet Header */
+/* XXXXXX 6.1 Tablet Header XXXXXX */
 
 .desktop-logo {
 	display: none;
@@ -1226,7 +1389,7 @@ select:focus {
 	margin-top: 1em;
 }
 
-/* 6.2 Tablet Structure */
+/* XXXXXX 6.2 Tablet Structure XXXXXX */
 
 .wrapper {
 	width: 95%;
@@ -1246,24 +1409,21 @@ select:focus {
 }
 
 
-/* 6.3 Tablet Typography */
-
-/* 6.4 Tablet Buttons */
-
-/* 6.5 Tablet Media */
-
-/* 6.6 Tablet Footer */
+/* XXXXXX 6.3 Tablet Typography XXXXXX */
+/* XXXXXX 6.4 Tablet Buttons XXXXXX */
+/* XXXXXX 6.5 Tablet Media XXXXXX */
+/* XXXXXX 6.6 Tablet Footer XXXXXX */
 
 }
 
 
 
 
-/* 7.0 MOBILE SIZE */
+/* >>>>>> 7.0   M O B I L E  S I Z E  <<<<<< */
 
 @media (max-width: 480px) {
 
-/* 7.1 Mobile Header */
+/* XXXXXX 7.1 Mobile Header XXXXXX */
 
 header {
 	margin-bottom: 2rem;
@@ -1282,7 +1442,7 @@ header {
 	padding: 0;
 }
 
-/* 7.2 Mobile Structure */
+/* XXXXXX 7.2 Mobile Structure XXXXXX */
 
 .wrapper {
 	width: 100%;
@@ -1297,7 +1457,7 @@ header {
 	margin-top: 0;
 }
 
-/* 7.3 Mobile Typography */
+/* XXXXXX 7.3 Mobile Typography XXXXXX */
 
 h2 {
 	padding: 0 1rem;
@@ -1344,9 +1504,9 @@ blockquote {
 	padding: 3rem;
 }
 
-/* 7.4 Mobile Buttons */
+/* XXXXXX 7.4 Mobile Buttons XXXXXX */
 
-/* 7.5 Mobile Media */
+/* XXXXXX 7.5 Mobile Media XXXXXX */
 
 img {
 	margin: 0 auto;
@@ -1367,7 +1527,7 @@ img {
 }
 
 
-/* 7.6 Mobile Footer */
+/* XXXXXX 7.6 Mobile Footer XXXXXX */
 
 footer {
 	display: flex;
@@ -1398,9 +1558,9 @@ footer > div:last-of-type {
 	text-align: center;
 }
 
-
 #googleCalendarWrapper
 {
 	overflow:scroll;
 }
+
 }
