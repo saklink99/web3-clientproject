@@ -50,5 +50,14 @@ $(document).ready(function(){
 	  })
 
 
+	  $('.faq-btn').click(function() {
+	  	$('.faq').slideToggle();
+	  });
+
+
+	  $('.faq-item').click(function() {
+	  	$(this).children('.group-content').slideToggle();
+	  });
+
 });
 

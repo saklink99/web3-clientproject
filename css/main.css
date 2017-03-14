@@ -24,7 +24,7 @@
 3.0 - C O N T E N T
 
 	3.1 - Site Structure
-	3.2- Site Header
+	3.2 - Site Header
 	3.3 - Site Footer
 	3.4 - Event Cards
 
@@ -411,8 +411,6 @@ input[type="text"], input[type="tel"], input[type="email"], textarea  {
 	padding: 10px;
 }
 
-
-
 select:focus {
 	outline: 0;
 }/* This removes the blue highlight when
@@ -473,6 +471,8 @@ fieldset {
 	text-transform: uppercase;
 	font-weight: 100;
 }
+
+/* FAQ DROPDOWN */
 
 
 
@@ -1143,9 +1143,21 @@ footer > div:last-of-type {
 	text-align: right;
 }
 
-.menu-item {
+.menu-item, .hide {
   	display: none;
 }/* By default, we will hide all of our packages */
+
+.show {
+	display: block;
+}
+
+.faq {
+	display: none;
+}
+
+.group-content {
+	display: none;
+}
 
 
 
