@@ -11,7 +11,7 @@
 	1.1 - Headings
 	1.2 - Body Copy
 	1.3 - Buttons
-	1.4 - Forms
+	1.4 - Forms & Dropdown Menus
 	1.5 - Lists
 	1.6 - Tables
 
@@ -111,6 +111,10 @@ h2 {
 	text-align: center;
 }
 
+form h2 {
+	padding-bottom: 2rem;
+}
+
 h3 {
 	font-family:'Cormorant Garamond', serif;
 	font-size: 36px;
@@ -181,6 +185,13 @@ p {
 	letter-spacing: 1.05px;
 	line-height: 1.75rem;
 	margin: 0;
+}
+
+#greek-life p:first-child {
+	font-size: 1.45rem;
+	text-align: center;
+	line-height: 40px;
+	padding: 2rem 7rem;
 }
 
 #hero p, #about p, #events p{
@@ -317,7 +328,26 @@ footer h6.right a {
 
 
 
-/* XXXXXX 1.4 Forms XXXXXX */
+/* XXXXXX 1.4 Forms & Dropdown Menus XXXXXX */
+
+
+form {
+  	margin: 100px 0 4rem 0;
+  	padding: 20px 30px;
+  	width: 60%;
+
+  	display: flex;
+  	flex-direction: column;
+}
+
+form > div:first-of-type {
+	display: flex;
+	justify-content: space-between;
+}
+
+form .cta-btn {
+	margin: 0;
+}
 
 #form-container.row {
 	display: flex;
@@ -328,11 +358,13 @@ footer h6.right a {
     display: flex;
     justify-content: center;
     width: 100%;
+    padding: 5rem 4rem;
 }
 
-#message, #select {
+#message {
   	background-color: #fff;
   	border-bottom: none;
+  	margin: 2px 0rem 55px 0rem;
 }
 
 #name {
@@ -355,21 +387,55 @@ footer h6.right a {
 	text-transform: none;
 }
 
-form > div:first-of-type {
-	display: flex;
-	justify-content: space-between;
+label {
+    padding-left: 15px;
+    text-indent: -15px;
 }
 
-form {
-	margin-bottom: 4rem;
+label[for="fname"], label[for="lname"], label[for="phone"], label[for="email"], label[for="event"], label[for="message"], label[for="event-budget"], label[for="occasion"] {
+	display: none;
 }
 
-form .cta-btn {
-	margin: 0;
+input, textarea {
+  	border: none;
+    background-color: transparent;
 }
 
-form p {
-	margin: 0;
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+	margin-bottom: 50px;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], textarea  {
+	width: 100%;
+	border-bottom: .5px solid grey;
+	padding: 10px;
+}
+
+
+
+select:focus {
+	outline: 0;
+}/* This removes the blue highlight when
+the dropdown menu is clicked */
+
+#packages .select {
+  	display:flex;
+  	flex-direction: column;
+  	position: relative;
+  	width: 250px;
+  	height: 40px;
+  	padding-left: 30px;
+}
+
+.select {
+	font-family: 'Gibson', sans-serif; 
+	font-size: 1rem;
+	font-weight: 100;
+	padding-left: 1rem;
+	letter-spacing: 0.75px;
+	background-color: #fff;
+	margin: 1rem 0;
+	border-bottom: none;
 }
 
 legend {
@@ -388,54 +454,6 @@ fieldset {
   	font-weight: 100;
   	font-size: 28px;
   	color: grey;
-}
-
-label {
-    padding-left: 15px;
-    text-indent: -15px;
-}
-
-label[for="fname"], label[for="lname"], label[for="phone"], label[for="email"], label[for="event"], label[for="message"], label[for="event-budget"], label[for="occasion"] {
-	display: none;
-}
-
-input, textarea, select {
-  	border: none;
-    background-color: #FAF8F7
-}
-
-input[type="text"], input[type="tel"], input[type="email"], textarea {
-	margin-bottom: 50px;
-}
-
-form {
-  	margin-top: 100px;
-  	background-color: #FAF8F7;
-  	padding: 20px 30px;
-  	width: 60%;
-  	display: flex;
-  	flex-direction: column;
-}
-
-form p {
-	margin-bottom: 10px;
-}
-
-select, input[type="text"], input[type="tel"], input[type="email"], textarea  {
-	width: 100%;
-	border-bottom: .5px solid grey;
-	padding: 10px;
-}
-
-select {
-    height: 30px;
-	font-family: 'Gibson', sans-serif;
-    font-weight: 100;
-}
-
-select, input[type="radio"], input[type="checkbox"] {
-	margin: 0 5px 20px 0;
-  	background: #fff;
 }
 
 ::-webkit-input-placeholder { 
@@ -1137,53 +1155,11 @@ footer > div:last-of-type {
 
 
 
-/* DROP DOWN STYLING STARTS HERE...TO BE STYLED/ORGANIZED */
 
-#packages select {
-	font-family: 'Gibson', sans-serif; 
-	font-size: 1rem;
-	font-weight: 100;
-	padding-left: 1rem;
-	text-transform: uppercase;
-	letter-spacing: 0.75px;
-	background-color: #f6f3f3;
-	border-bottom: none;
-}
 
-select:focus {
-	outline: 0;
-}
 
-#packages .select {
-  display:flex;
-  flex-direction: column;
-  position:relative;
-  width:250px;
-  height:40px;
-  padding-left: 30px;
-}
 
-#packages .option {
-  padding:0 30px 0 10px;
-  min-height:40px;
-  display:flex;
-  align-items:center;
-  background:#333;
-  border-top:#222 solid 1px;
-  position:absolute;
-  top:0;
-  width: 100%;
-  order:2;
-  z-index:1;
-  transition:background .4s ease-in-out;
-  box-sizing:border-box;
-  overflow:hidden;
-  white-space:nowrap;
-}
 
-#packages .option:hover {
-  background:#666;
-}
 
 
 
