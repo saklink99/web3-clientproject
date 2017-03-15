@@ -361,6 +361,7 @@ form .cta-btn {
 }
 
 label {
+	display: none;
     padding-left: 15px;
     text-indent: -15px;
 }
@@ -384,7 +385,7 @@ input[type="text"], input[type="tel"], input[type="email"], textarea  {
 	padding: 10px;
 }
 
-select:focus {
+select:focus, input:focus {
 	outline: 0;
 }/* This removes the blue highlight when
 the dropdown menu is clicked */
@@ -405,7 +406,9 @@ the dropdown menu is clicked */
   	border-bottom: none;
   	margin: 1rem 0;
   	padding-left: 1rem;
-}
+}/* THIS LOOKS DIFFERENT ON FIREFOX, FIREFOX VERSION
+DOES NOT HAVE ROUNDED CORNERS, CONSIDER ADDING
+BORDER RADIUS HERE */
 
 legend {
 	font-family: 'Gibson', sans-serif;
@@ -1104,7 +1107,6 @@ blockquote, blockquote.center {
 	margin-top: 7rem;
 }
 
-
 /* XXXXXX 6.3 Tablet Typography XXXXXX */
 
 #contact h2 {
@@ -1156,17 +1158,59 @@ header {
 
 /* XXXXXX 7.2 Mobile Structure XXXXXX */
 
+section {
+	padding: 0;
+}
+
+form {
+	width: 100%;
+}
+
+table {
+	float: left;
+	letter-spacing: 1px;
+	line-height: 20px;
+	width: 90%;
+	padding: 0 2rem;
+}
+
+td {
+	padding-right: 42px;
+}
+
+.col-1-2 {
+	width: 100%;
+}
+
+.col-3-4 {
+	width: 100%;
+}
+
 .wrapper {
 	width: 100%;
 }
 
-.col-1-2, .col-3-4 {
-	width: 100%;
-	padding: 0;
-}
-
 #what-we-offer {
 	margin-top: 0;
+}
+
+.package-card {
+	flex-direction: column;
+	width: 100%;
+}
+
+#weddings .package-card:first-of-type > div:first-of-type,
+#weddings .package-card:nth-of-type(2) > div:first-of-type,
+#business .package-card:first-of-type > div:first-of-type,
+#tailgates .package-card:first-of-type > div:first-of-type,
+#aeries .package-card:first-of-type > div:first-of-type,
+#greek-life .package-card:first-of-type > div:first-of-type,
+#greek-life .package-card:nth-of-type(2) > div:first-of-type,
+#wine-down-wednesday .package-card:first-of-type > div:first-of-type {
+  	margin-right: 30px;
+  	max-width: 100%;
+  	min-width: 240px;
+  	height: 200px;
 }
 
 /* XXXXXX 7.3 Mobile Typography XXXXXX */
@@ -1175,7 +1219,20 @@ h2 {
 	padding: 2rem 1rem 0;
 	font-size: 2.65rem;
 	text-align: left;
-	margin-bottom: 3rem;
+	margin-bottom: 20px;
+}
+
+h4 {
+  	font: 100 1.65rem 'Gibson', sans-serif;
+  	text-align: center;
+  	text-transform: uppercase;
+  	margin: 0;
+}
+
+#about h2, #events h2 {
+	font-size: 3rem;
+	text-align: center;
+	letter-spacing: 2px;
 }
 
 #contact h2 {
@@ -1190,20 +1247,12 @@ h2 {
 	padding: 0 1rem;
 }
 
-#contact .cta-btn {
-	margin-bottom: 3rem;
-}
-
 #addressWrapper {
 	padding: 2rem;
 }
 
 #addressWrapper  h5 {
 	padding: 1rem;
-}
-
-form {
-	width: 100%;
 }
 
 #what-we-offer h3 {
@@ -1215,13 +1264,47 @@ form {
 }
 
 p {
-	line-height: 2rem;
-	padding: 0 1rem;
+  	font: 100 1.10rem/1.75rem 'Gibson', sans-serif;
+  	letter-spacing: 1.05px;
+  	text-align: center;
+  	margin: 0;
+  	padding: 0 1rem;
+}
+
+.note {
+	line-height: 18px;
+	max-width: 100%;
+	padding: 0;
+}
+
+.includes {
+	text-align: center;
+  	margin: 1rem 0;
+}
+
+.features {
+	font-size: 15px;
+	text-align: center;
+	padding-left: 0;
+}
+
+.features li {
+	padding: 1rem 0;
+}
+
+#greek-life p:first-child {
+  	font-size: 1.11rem;
+  	line-height: 33px;
+  	margin: 3rem 0;
+  	padding: 0;
 }
 
 
-
 /* XXXXXX 7.4 Mobile Buttons XXXXXX */
+
+#contact .cta-btn {
+	margin-bottom: 3rem;
+}
 
 /* XXXXXX 7.5 Mobile Media XXXXXX */
 
@@ -1238,8 +1321,17 @@ img {
 	display: none;
 }
 
+#events img:first-of-type {
+	display: none;
+}
+
 #events img:nth-of-type(2) {
 	display: none;
+}
+
+.card-underline {
+	margin: 0 auto;
+	padding: 1rem 0;
 }
 
 
