@@ -61,41 +61,39 @@
 
 
 
+
+
+
+
+
+
 * {
 	overflow-x: hidden;
 }
-
-
 
 /* >>>>>> 1.0   T Y P O G R A P H Y  <<<<<< */
 
 /* XXXXXX 1.1 Headings XXXXXX */
 
 h1 {
-	font-family: 'Josefin Sans', sans-serif;
-	text-align: center;
-	font-size: 2rem;
-	color: #86332C;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.25rem;
-	margin: 0;
+  	font: 600 2rem 'Josefin Sans', sans-serif;
+  	color: #86332C; 
+  	letter-spacing: 0.25rem;
+  	text-align: center;
+  	text-transform: uppercase; 
+  	margin: 0;
 }
 
 h2 {
-	font-family:'Cormorant Garamond', serif; 
-	font-size: 2.6rem;
-	font-weight: 400;
-	letter-spacing: 3px;
-	color: #86332C;
-	/*margin-bottom: 4rem;
-	padding: 0 2rem;*/
+  	font: 400 2.6rem 'Cormorant Garamond', serif;
+  	color: #86332C;
+  	letter-spacing: 3px;
 }
 
 #hero h2 {
-	margin-top: 2.5rem;
-	margin-bottom: 4.5rem;
-	padding: 0 0 0 2rem;
+  	margin-top: 2.5rem;
+  	margin-bottom: 4.5rem;
+  	padding-left: 2rem;
 }
 
 #about h2, #events h2 {
@@ -104,13 +102,11 @@ h2 {
 }
 
 #bar-options h2 {
-	font-family: 'Gibson', sans-serif;
-	font-size: 2.65rem;
-	color: #7d494b;
-	font-weight: 100;
-	letter-spacing: 4.01px;
-	text-transform: uppercase;
-	text-align: center;
+  	font: 100 2.65rem 'Gibson', sans-serif;
+  	color: #7d494b;
+  	letter-spacing: 4.01px;
+  	text-align: center;
+  	text-transform: uppercase;
 }
 
 form h2 {
@@ -118,12 +114,8 @@ form h2 {
 }
 
 h3 {
-	font-family:'Cormorant Garamond', serif;
-	font-size: 36px;
-	font-weight: 300;
-	font-style: italic;
-	letter-spacing: 2.83px;
-	line-height: 33px;
+  	font: italic 300 36px/33px 'Cormorant Garamond', serif;
+  	letter-spacing: 2.83px;
 }
 
 #what-we-offer h3 {
@@ -135,23 +127,19 @@ h3 {
 }
 
 h4 {
-	font-family: 'Gibson', sans-serif;
-	font-size: 1.65rem;
-	color: #7d494b;
-	font-weight: 100;
-	letter-spacing: .01px;
-	text-transform: uppercase;
-	margin: 0;
-}/* This is the same as h5 */
+  	font: 100 1.65rem 'Gibson', sans-serif;
+  	color: #7d494b;
+  	letter-spacing: .01px;
+  	text-transform: uppercase;
+  	margin: 0;
+}
 
 h5 {
-	font-family: 'Gibson', sans-serif;
-	font-size: 16px;
-	color: #7d494b;
-	font-weight: 100;
-	letter-spacing: .01px;
-	text-transform: uppercase;
-	margin: 0;
+  	font: 100 16px 'Gibson', sans-serif;
+  	color: #7d494b;
+  	letter-spacing: .01px;
+  	text-transform: uppercase;
+  	margin: 0;
 }
 
 .col-1-2 > h5 {
@@ -159,41 +147,28 @@ h5 {
 }
 
 h6 {
-	font-family: 'Gibson', sans-serif;
-	font-size: 16px;
-	font-weight: 100;
-	letter-spacing: .01px;
-	margin: 0;
+  	font: 100 16px 'Gibson', sans-serif;
+  	letter-spacing: .01px;
+  	margin: 0;
 }
 
 h5, h6 {
 	padding-bottom: 0.25rem;
 }
 
-
-
-
-
-
-
-
-
 /* XXXXXX 1.2 Body Copy XXXXXX */
 
 p {
-	font-family: 'Gibson', sans-serif;
-	font-size: 1.15rem;
-	font-weight: 100;
-	letter-spacing: 1.05px;
-	line-height: 1.75rem;
-	margin: 0;
+  	font: 100 1.15rem/1.75rem 'Gibson', sans-serif;
+  	letter-spacing: 1.05px;
+  	margin: 0;
 }
 
 #greek-life p:first-child {
-	font-size: 1.45rem;
-	text-align: center;
-	line-height: 40px;
-	padding: 2rem 7rem;
+  	font-size: 1.45rem;
+  	text-align: center;
+  	line-height: 40px;
+  	padding: 2rem 7rem;
 }
 
 #hero p, #about p, #events p{
@@ -201,24 +176,19 @@ p {
 }
 
 h1 ~ p {
-	font-family: 'Josefin Sans', sans-serif;
-	text-align: center;
-	font-size: 1rem;
-	font-weight: 100;
-	color: #000;
-	text-transform: uppercase;
-	letter-spacing: 0.25rem;
+  	font: 100 1rem 'Josefin Sans', sans-serif;
+  	color: #000;
+  	letter-spacing: 0.25rem;
+  	text-align: center;
+  	text-transform: uppercase;
 }
 
 blockquote.center {
-	background-color: #f6f3f3;
-	font-family: 'Cormorant Garamond', serif; 
-	font-size: 2.5rem;
-	font-weight: 300;
-	letter-spacing: 0.73px;
-	line-height: 4rem;
-	margin-top: 5rem;
-	padding: 4rem 14rem;
+  	font: 300 2.5rem/4rem 'Cormorant Garamond', serif;
+  	background-color: #f6f3f3;
+  	letter-spacing: 0.73px;
+  	margin-top: 5rem;
+  	padding: 4rem 14rem;
 }
 
 #what-we-offer p {
@@ -242,39 +212,22 @@ footer p {
 	line-height: 1.15rem;
 }
 
-
-
-
-
-
-
-
-
 /* XXXXXX 1.3 Buttons XXXXXX */
 
-.cta-btn, .faq-btn {
+.cta-btn, 
+.faq-btn {
 	display: block;
-    text-decoration: none;
+	font-size: .75rem;
+	letter-spacing: 3px;
     text-align: center;
-    margin: 2rem auto 0 auto;
-    max-width: 300px;
-   /* color: #86332C;
-    border: 0.25px solid #86332C;
-    padding: 15px 40px;
-    display: block;
     text-decoration: none;
-    text-align: center;
-    margin: 2rem auto 0 auto;
-    max-width: 300px;*/
     text-transform: uppercase;
-    padding: 15px 45px 15px 45px;
-    letter-spacing: 3px;
     transition: all 0.2s ease-out;
     border-radius: 2px;
     border-bottom: .25px solid #86332C;
-    margin-top: 2rem;
-    font-size: .75rem;
-
+    max-width: 300px;
+    margin: 2rem auto 0 auto;
+    padding: 15px 45px 15px 45px;
 }
 
 .cta-btn:hover {
@@ -286,12 +239,12 @@ a.cta-btn:hover {
 }
 
 .main-nav-btn {
-	color: black;
 	display: block;
-	text-align: center;
 	font-family: 'Cormorant Garamond', serif;
-	text-transform: uppercase;
+	color: #000;
+	text-align: center;
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .main-nav-btn:hover {
@@ -303,13 +256,11 @@ a.cta-btn:hover {
 }
 
 .footer-nav-btn {
-	font-size: 0.9375rem;
-	font-weight: 100;
-	letter-spacing: .01px;
-	color: #000;
-	font-family: 'Gibson', sans-serif;
-	text-transform: uppercase;
-	text-decoration: none;
+  	font: 100 0.9375rem 'Gibson', sans-serif;
+  	color: #000;
+  	letter-spacing: .01px;
+  	text-decoration: none;
+  	text-transform: uppercase;
 }
 
 .footer-nav-btn:hover {
@@ -325,11 +276,11 @@ footer h6.right a {
 }/* This makes Matt's email lowercase */
 
 #social-media-btn {
-	width: 100px;
 	font-size: 1.75rem;
-	padding: 0;
 	text-decoration: none;
+	width: 100px;
 	margin: 0;
+	padding: 0;
 }
 
 .fa-facebook-official, .fa-instagram {
@@ -340,24 +291,15 @@ footer h6.right a {
 	color: #e4e4e4;
 }
 
-
-
-
-
-
-
-
-
 /* XXXXXX 1.4 Forms & Dropdown Menus XXXXXX */
 
 
 form {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
   	margin: 100px 0 4rem 0;
   	padding: 20px 30px;
-  	width: 60%;
-
-  	display: flex;
-  	flex-direction: column;
 }
 
 form > div:first-of-type {
@@ -374,8 +316,8 @@ form .cta-btn {
 }
 
 #form-container {
+	display: flex;
 	align-items: center;
-    display: flex;
     justify-content: center;
     width: 100%;
     padding: 5rem 4rem;
@@ -398,13 +340,13 @@ form .cta-btn {
 }
 
 #fname, #lname {
+	display: inline-block;
   	width: 45%;
-  	display: inline-block;
 }
 
 #time-limit {
-	padding: 0px 100px 0 0;
 	text-transform: none;
+	padding: 0px 100px 0 0;
 }
 
 label {
@@ -417,8 +359,8 @@ label[for="fname"], label[for="lname"], label[for="phone"], label[for="email"], 
 }
 
 input, textarea {
+	background-color: transparent;
   	border: none;
-    background-color: transparent;
 }
 
 input[type="text"], input[type="tel"], input[type="email"], textarea {
@@ -426,8 +368,8 @@ input[type="text"], input[type="tel"], input[type="email"], textarea {
 }
 
 input[type="text"], input[type="tel"], input[type="email"], textarea  {
-	width: 100%;
 	border-bottom: .5px solid grey;
+	width: 100%;
 	padding: 10px;
 }
 
@@ -437,7 +379,7 @@ select:focus {
 the dropdown menu is clicked */
 
 #packages .select {
-  	display:flex;
+  	display: flex;
   	flex-direction: column;
   	position: relative;
   	width: 250px;
@@ -446,118 +388,93 @@ the dropdown menu is clicked */
 }
 
 .select {
-	font-family: 'Gibson', sans-serif; 
-	font-size: 1rem;
-	font-weight: 100;
-	padding-left: 1rem;
-	letter-spacing: 0.75px;
-	background-color: #fff;
-	margin: 1rem 0;
-	border-bottom: none;
+  	font: 100 1rem 'Gibson', sans-serif;
+  	background-color: #fff;
+  	letter-spacing: 0.75px;
+  	border-bottom: none;
+  	margin: 1rem 0;
+  	padding-left: 1rem;
 }
 
 legend {
-	font: inherit;
+	font-family: 'Gibson', sans-serif;
+	color: grey;
     font-weight: 100;
-    font-family: gibson;
     text-transform: uppercase;
-    color: #333;
     padding: 10px;
 }
 
 fieldset {
-	border: 0 none;
-	margin: 10px 200px; 
-  	font-family: coromorant gramond, serif;
-  	font-weight: 100;
-  	font-size: 28px;
-  	color: grey;
+	font-family: 'Gibson', sans-serif;
+	letter-spacing: 0.25px;
+	font-weight: 100;
+	text-transform: uppercase;
+	border: none;
 }
 
 ::-webkit-input-placeholder { 
-	text-transform: uppercase;
+	font-family: 'Gibson', sans-serif; 
 	font-weight: 100;
-    font-family: 'Gibson', sans-serif; 
+	text-transform: uppercase;
  }
+
 ::-moz-placeholder {
-	text-transform: uppercase;
 	font-weight: 100;
+	text-transform: uppercase;
 }
+
 :-ms-input-placeholder { 
-	text-transform: uppercase;
 	font-weight: 100;
+	text-transform: uppercase;
 }
+
 :-moz-placeholder { 
-	text-transform: uppercase;
 	font-weight: 100;
+	text-transform: uppercase;
 }
-
-/* FAQ DROPDOWN */
-
-
-
-
-
-
-
-
 
 /* XXXXXX 1.5 Lists XXXXXX */
-
-
-
-
-
-
-
-
 
 /* XXXXXX 1.6 Tables XXXXXX */
 
 table {
-	width: 50%;
 	float: left;
-	padding-right: 20px;
 	letter-spacing: 2px;
 	line-height: 20px;
+	width: 50%;
+	padding-right: 20px;
 }
 
 th {
-	font-family: 'Gibson', sans-serif;
-	font-size: 1rem;
-	color: #7d494b;
-	font-weight: 400;
-	text-transform: uppercase;
-	text-align: left;
-	padding-bottom: 10px;
-	letter-spacing: 2.55px;
-	border-bottom: 1px solid #7d494b;
+  	font: 400 1rem 'Gibson', sans-serif;
+  	color: #7d494b;
+  	letter-spacing: 2.55px;
+  	text-align: left;
+  	text-transform: uppercase;
+  	border-bottom: 1px solid #7d494b;
+  	padding-bottom: 10px;
 }
 
 td {
-	font-family: 'Gibson', sans-serif;
-	font-size: 1rem;
-	color: #000;
-	font-weight: 100;
-	padding: 7px 0;
+  	font: 100 1rem 'Gibson', sans-serif;
+  	color: #000;
+  	padding: 7px 0;
 }
 
 .beverage-type {
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 1rem;
-	color: #000;
-	font-weight: 100;
-	text-transform: uppercase;
-	text-align: left;
-	letter-spacing: 4px;
-	padding-top: 13px;
+  	font: 100 1rem 'Cormorant Garamond', serif;
+  	color: #000;
+  	letter-spacing: 4px;
+  	text-align: left;
+  	text-transform: uppercase;
+  	padding-top: 13px;
 }
 
 .table-footnote {
 	font-family: 'Cormorant Garamond', serif;
-	font-size: 13px;
 	color: #000;
 	letter-spacing: 0.2px;
+	font-size: 13px;
 	font-style: italic;
 	font-weight: 100;
 }
@@ -565,6 +482,8 @@ td {
  .table-price {
  	text-align: right;
  }
+
+
 
 
 
@@ -584,33 +503,18 @@ td {
 
 .main-nav > ul {
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
+	justify-content: space-around;
 }
 
 .mobile-nav, .mobile-btn-wrapper {
 	display: none;
 }
 
-
-
-
-
-
-
-
-
 /* XXXXXX 2.2 Sub  XXXXXX */
-
-
-
-
-
-
-
-
-
 /* XXXXXX 2.3 Footer XXXXXX */
+
+
 
 
 
@@ -660,52 +564,65 @@ ul {
 }
 
 .row:after {
+	display: table;
 	content: ""; /* You have to this for any 
 	pseudo element before/after */
-	display: table;
 	clear: both;
 }
 
+.col-1-2 {
+	width: 50%;
+}
+
+.col-1-3 {
+	width: 33.33%
+}
+
+.col-3-4 {
+	width: 75%;
+}
+
 .wrapper {
+	overflow-x: hidden;
 	width: 75%;
 	margin: 0 auto;
-	overflow-x: hidden;
 }
 
 #events {
-	margin-bottom: 6rem;
 	overflow: hidden;
+	margin-bottom: 6rem;
 	/* This is hiding the scroll bar that appears 
 	at the top of the Events page */
 }
 
 .address {
-	font-size: 1.25rem;
 	color: #86332C;
+	font-size: 1.25rem;
 }
+
  .address:nth-child(3) {
  	margin-bottom: 20px;
  }
 
  #packages {
- 	padding: 4rem;
  	position: relative;
+ 	padding: 4rem;
  	z-index: 1;
  }
 
  .packages-header {
- 	justify-content: space-between;
- 	align-items: center;
  	position: relative;
+ 	align-items: center;
+ 	justify-content: space-between;
  }
 
  .packages-header:before {
+ 	background-color: #000;
     position: absolute;
     top: 28%;
     left: 16%;
-    height: 1px;
     width: 70%;
-    background-color: #000;
+    height: 1px;
     content: '';
     z-index: 2;
 }
@@ -722,17 +639,14 @@ ul {
 }
 
 .includes {
-	font-family: 'Cormorant Garamond', serif; 
-	font-size: 1.35rem;
-	font-style: italic;
-	font-weight: 100;
 	display: block;
-	margin-bottom: 1rem;
+  	font: italic 100 1.35rem 'Cormorant Garamond', serif;
+  	margin-bottom: 1rem;
 }
 
 .price {
-	font-size: 1.35rem;
 	color: #000;
+	font-size: 1.35rem;
 }
 
 .card-underline {
@@ -742,12 +656,12 @@ ul {
 }
 
 .features {
-	font-family: 'Gibson', sans-serif; 
+	font-family: 'Gibson', sans-serif;
+	letter-spacing: 0.75px; 
 	font-size: 1rem;
 	font-weight: 100;
-	padding-left: 1rem;
 	text-transform: uppercase;
-	letter-spacing: 0.75px;
+	padding-left: 1rem;
 }
 
 .features li {
@@ -755,21 +669,20 @@ ul {
 }
 
 .event-description {
+	display: block;
 	font-family: 'Cormorant Garamond', serif; 
 	font-size: 1rem;
 	font-style: italic;
 	font-weight: 100;
-	display: block;
 	margin-left: 0;
 }
 
 .package-card {
-	background-color: #fff;
-
 	display: flex;
 	justify-content: space-between;
-	margin: 1rem auto;
+	background-color: #fff;
 	width: 70%;
+	margin: 1rem auto;
 	padding: 3rem;
 }
 
@@ -789,12 +702,6 @@ ul {
 	padding-bottom: .25rem;
 }
 
-
-
-
-
-
-
 /* XXXXXX 3.2 Site Header XXXXXX */
 
 header {
@@ -803,22 +710,14 @@ header {
 }
 
 .logo {
+	display: block;
 	width: 80px;
 	margin: 0 auto 0.75rem auto;
-	display: block;
 }
 
 .tablet-logo-container {
 	display: none;
 }
-
-
-
-
-
-
-
-
 
 /* XXXXXX 3.3 Site Footer XXXXXX */
 
@@ -883,14 +782,6 @@ footer > div:last-of-type {
     color: #000000;
 }
 
-
-
-
-
-
-
-
-
 /* XXXXXX 3.4 Event Cards XXXXXX */
 
 @-webkit-keyframes fade-in {
@@ -926,85 +817,52 @@ footer > div:last-of-type {
     animation: fade-in 0.5s forwards;
 }
 
+#weddings .package-card:first-of-type > div:first-of-type,
+#weddings .package-card:nth-of-type(2) > div:first-of-type,
+#business .package-card:first-of-type > div:first-of-type,
+#tailgates .package-card:first-of-type > div:first-of-type,
+#aeries .package-card:first-of-type > div:first-of-type,
+#greek-life .package-card:first-of-type > div:first-of-type,
+#greek-life .package-card:nth-of-type(2) > div:first-of-type,
+#wine-down-wednesday .package-card:first-of-type > div:first-of-type {
+  	margin-right: 30px;
+  	max-width: 50%;
+  	min-width: 390px;
+}
+
 #weddings .package-card:first-of-type > div:first-of-type {
-	background-repeat: no-repeat;
-	background-image: url(../img/talon-room-wedding.jpg);
-	background-size: 100%;
-	background-position: right;
-	margin-right: 30px;
-	max-width: 50%;
-	min-width: 390px;
+ 	background: url(../img/talon-room-wedding.jpg) no-repeat right/100%;
 }
 
 #weddings .package-card:nth-of-type(2) > div:first-of-type {
-	background-repeat: no-repeat;
-	background-image: url(../img/chefauchef-wedding-special.jpg);
-	background-size: 100%;
-	background-position: right;
-	margin-right: 30px;
-	max-width: 50%;
-	min-width: 390px;
+  	background: url(../img/chefauchef-wedding-special.jpg) no-repeat right/100%;
 }
 
 #business .package-card:first-of-type > div:first-of-type {
-	background-repeat: no-repeat;
-	background-image: url(../img/business.jpg);
-	background-size: 100%;
-	background-position: right;
-	margin-right: 30px;
-	max-width: 50%;
-	min-width: 390px;
+  background: url(../img/business.jpg) no-repeat right/100%;
 }
 
 #tailgates .package-card:first-of-type > div:first-of-type {
-	background-repeat: no-repeat;
-	background-image: url(../img/tailgate.jpg);
-	background-size: 100%;
-	background-position: right;
-	margin-right: 30px;
-	max-width: 50%;
-	min-width: 390px;
+  background: url(../img/tailgate.jpg) no-repeat right/100%;
 }
 
 #aeries .package-card:first-of-type > div:first-of-type {
-	background-repeat: no-repeat;
-	background-image: url(../img/aeries.jpg);
-	background-size: 100%;
-	background-position: right;
-	margin-right: 30px;
-	max-width: 50%;
-	min-width: 390px;
+  background: url(../img/aeries.jpg) no-repeat right/100%;
 }
 
 #greek-life .package-card:first-of-type > div:first-of-type {
-	background-repeat: no-repeat;
-	background-image: url(../img/greek-formals.jpg);
-	background-size: 100%;
-	background-position: right;
-	margin-right: 30px;
-	max-width: 50%;
-	min-width: 390px;
+  background: url(../img/greek-formals.jpg) no-repeat right/100%;
 }
 
 #greek-life .package-card:nth-of-type(2) > div:first-of-type {
-	background-repeat: no-repeat;
-	background-image: url(../img/greek-life-events.jpg);
-	background-size: 100%;
-	background-position: right;
-	margin-right: 30px;
-	max-width: 50%;
-	min-width: 390px;
+  background: url(../img/greek-life-events.jpg) no-repeat right/100%;
 }
 
 #wine-down-wednesday .package-card:first-of-type > div:first-of-type {
-	background-repeat: no-repeat;
-	background-image: url(../img/wine-down-wednesday.jpg);
-	background-size: 100%;
-	background-position: right;
-	margin-right: 30px;
-	max-width: 50%;
-	min-width: 390px;
+  background: url(../img/wine-down-wednesday.jpg) no-repeat right/100%;
 }
+
+
 
 
 
@@ -1031,10 +889,10 @@ footer > div:last-of-type {
 
 .bg-gray-bar {
 	background-color: #f6f3f3;
-	height: 190px;
 	width: 100%;
-	z-index: -1;
+	height: 190px;
 	position: absolute;
+	z-index: -1;
 }
 
 .bg-gray {
@@ -1056,21 +914,19 @@ body > .bg-gray-bar {
 }
 
 #home-stamp {
-	width: 35%;
-	min-width: 200px;
-	
 	position: absolute;
 	top: 61%;
     left: 63%;
+	width: 35%;
+	min-width: 200px;
 }
 
 #about img:nth-of-type(2) {
-	width: 32%;
-	min-width: 100px;
-
 	position: absolute;
 	top: 62%;
 	left: 17%;
+	width: 32%;
+	min-width: 100px;
 }
 
 #googleCalendar {
@@ -1079,33 +935,26 @@ body > .bg-gray-bar {
 }
 
 #map {
+	width: 40%;
   	height: 350px;
   	margin-top: 15px;
-  	width: 40%;
 }
 
 #map * {
 	overflow: visible;
 	}
-#events img:nth-of-type(2) {
-	width: 32%;
-	min-width: 100px;
 
+#events img:nth-of-type(2) {
 	position: absolute;
 	top: 62%;
 	left: 27%;
+	width: 32%;
+	min-width: 100px;
 }/* This is the smaller wine glass image */
 
 #what-we-offer img {
 	margin-left: 5rem;
 }/* This is moving the floor plan inwards */
-
-
-
-
-
-
-
 
 /* XXXXXX 4.1 Carousel XXXXXX */
 
@@ -1120,19 +969,19 @@ body > .bg-gray-bar {
 }
 
 .carousel {
+	position: relative;
   	max-width: 100%;
-  	position: relative;
   	margin: 0 auto;
 }
 
 .dot {
+	background-color: #bbb;
+	display: inline-block;
+	width: 13px;
   	height: 13px;
-  	width: 13px;
-  	margin: 0 2px;
-  	background-color: #bbb;
   	border-radius: 50%; /* Needs vendor prefix */
-  	display: inline-block;
   	transition: background-color 0.6s ease;
+  	margin: 0 2px;
 }
 
 .active {
@@ -1145,6 +994,8 @@ body > .bg-gray-bar {
     animation-name: fade;
     animation-duration: 1.5s;
 }
+
+
 
 
 
@@ -1202,197 +1053,6 @@ body > .bg-gray-bar {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 5.0 COLUMN WIDTHS - DELETE ONCE COMPLETE */
-
-/* ONE COLUMN */
-
-.col-1-1 {
-	width: 100%;
-}
-
-/* TWO COLUMNS */
-
-.col-1-2 {
-	width: 50%;
-}
-
-/* THREE COLUMNS */
-
-.col-1-3 {
-	width: 33.33%
-}
-
-.col-2-3 {
-	width: 66.671%
-}
-
-.col-2-5 {
-	width: 40%;
-}
-/* FOUR COLUMNS */
-
-.col-1-4 {
-	width: 25%;
-}
-
-.col-3-4 {
-	width: 75%;
-}
-
-/* FIVE COLUMNS */
-
-.col-1-5 {
-	width: 20%;
-}
-
-.col-3-5 {
-	width: 60%;
-}
-
-.col-4-5 {
-	width: 80%;
-}
-
-/* SIX COLUMNS */
-
-.col-1-6 {
-	width: 16.66%;
-}
-
-.col-5-6 {
-	width: 83.34%;
-}
-
-/* SEVEN COLUMNS */
-
-.col-1-7 {
-	width: 14.285%;
-}
-
-.col-6-7 {
-	width: 85.715%;
-}
-
-/* EIGHT COLUMNS */
-
-.col-1-8 {
-	width: 12.5%;
-}
-
-.col-7-8 {
-	width: 87.5%;
-}
-
-/*  NINE COLUMNS */
-
-.col-1-9 {
-	width: 11.11%;
-}
-
-.col-8-9 {
-	width: 88.89%;
-}
-
-/* TEN COLUMNS */
-
-.col-1-10 {
-	width: 10%;
-}
-
-.col-9-10 {
-	width: 90%;
-}
-
-/* ELEVEN COLUMN */
-
-.col-1-11 {
-	width: 9.09%;
-}
-
-.col-10-11 {
-	width: 90.91%;
-}
-
-/* TWELVE COLUMNS */
-
-.col-1-12 {
-	width: 8.33%;
-}
-
-.col-11-12 {
-	width: 91.67%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 /* >>>>>> 6.0   T A B L E T  S I Z E  <<<<<< */
 
 @media (max-width: 1050px) {
@@ -1436,6 +1096,13 @@ body > .bg-gray-bar {
 /* XXXXXX 6.6 Tablet Footer XXXXXX */
 
 }
+
+
+
+
+
+
+
 
 
 
