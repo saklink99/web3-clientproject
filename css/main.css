@@ -34,23 +34,34 @@
 
 5.0 - U T I L I Y
 
-6.0 - T A B L E T  S I Z E
+6.0 - L A P T O P  S I Z E
 
-	6.1 - Tablet Header
-	6.2 - Tablet Structure
-	6.3 - Tablet Typography
-	6.4 - Tablet Buttons
-	6.5 - Tablet Media
-	6.6 - Tablet Footer
+	6.1 - Labtop Header
+	6.2 - Laptop Structure
+	6.3 - Laptop Typography
+	6.4 - Laptop Buttons
+	6.5 - Laptop Media
+	6.6 - Laptop Footer
 
-7.0 - M O B I L E  S I Z E
 
-	7.1 - Mobile Header
-	7.2 - Mobile Structure
-	7.3 - Mobile Typography
-	7.4 - Mobile Buttons
-	7.5 - Mobile Media
-	7.6 - Mobile Footer
+7.0 - T A B L E T  S I Z E
+
+	7.1 - Tablet Header
+	7.2 - Tablet Structure
+	7.3 - Tablet Typography
+	7.4 - Tablet Buttons
+	7.5 - Tablet Media
+	7.6 - Tablet Footer
+		
+
+8.0 - M O B I L E  S I Z E
+
+	8.1 - Mobile Header
+	8.2 - Mobile Structure
+	8.3 - Mobile Typography
+	8.4 - Mobile Buttons
+	8.5 - Mobile Media
+	8.6 - Mobile Footer
 	
 
 ===========================================
@@ -169,6 +180,11 @@ p {
 	padding: 1rem 1rem;
 }
 
+#hero p {
+	background-color: white;
+	position: relative;
+}
+
 h1 ~ p {
   	font: 100 1rem 'Josefin Sans', sans-serif;
   	color: #000;
@@ -224,18 +240,20 @@ blockquote.center {
 /* XXXXXX 1.3 Buttons XXXXXX */
 
 .cta-btn, 
-.faq-btn {
+.faq-btn,
+.logo-link,
+.main-nav-btn {
 	display: inline;
-	font: 300 1.75rem/4rem 'Cormorant Garamond', serif;
+	font: 300 1.15rem/4rem 'Cormorant Garamond', serif;
 	color: #7d494b;
-	font-style: italic;
 	text-align: center;
 	text-decoration: none;
+	text-transform: uppercase;
 	position: relative;
 	padding-bottom: 10px;
 }
 
-.cta-btn:after, .faq-btn:after {
+.cta-btn:after, .faq-btn:after, .logo-link:after, .main-nav-btn:after {
 	background: none repeat scroll 0 0 transparent;
 	bottom: 0;
 	content: "";
@@ -248,12 +266,16 @@ blockquote.center {
 	width: 0;
 }
 
-.cta-btn:hover:after, .faq-btn:hover:after {
+.cta-btn:hover:after, .faq-btn:hover:after, .logo-link:hover:after, .main-nav-btn:hover:after {
 	width: 100%;
 	left: 0;
 }
 
-.main-nav-btn {
+.tablet-logo-container > a {
+	text-decoration: none;
+}
+
+/*.main-nav-btn {
 	display: block;
 	font-family: 'Cormorant Garamond', serif;
 	color: #000;
@@ -262,9 +284,9 @@ blockquote.center {
 	text-transform: uppercase;
 	position: relative;
 	padding-bottom: 10px;
-}
+}*/
 
-.main-nav-btn:after {
+/*.main-nav-btn:after {
 	background: none repeat scroll 0 0 transparent;
 	bottom: 0;
 	content: "";
@@ -275,14 +297,17 @@ blockquote.center {
 	background: #000;
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
-}
+}*/
 
-.main-nav-btn:hover:after {
+/*.main-nav-btn:hover:after {
 	width: 100%;
 	left: 0;
-}
+}*/
 
 .contact-btn {
+	display: block;
+	font-family: 'Gibson', sans-serif;
+	color: #7d494b;
 	text-decoration: none;
 }
 
@@ -973,9 +998,9 @@ body > .bg-gray-bar {
 	position: absolute;
 	top: 77%;
     left: 70%;
-    mix-blend-mode: screen;
 	width: 55%;
 	min-width: 200px;
+	z-index: 10;
 }
 
 #about img:nth-of-type(2) {
@@ -1064,10 +1089,6 @@ body > .bg-gray-bar {
 
 /* >>>>>> 5.0  U T I L I T Y <<<<<< */
 
-.border-bottom {
-	border-bottom: 1px solid black;
-}
-
 .flex {
 	display: flex;
 }
@@ -1105,12 +1126,12 @@ body > .bg-gray-bar {
 
 
 
-/* >>>>>> 6.0   T A B L E T  S I Z E  <<<<<< */
+/* >>>>>> 6.0   L A P T O P  S I Z E  <<<<<< */
 
 @media (max-width: 1050px) {
 
 
-/* XXXXXX 6.1 Tablet Header XXXXXX */
+/* XXXXXX 6.1 Laptop Header XXXXXX */
 
 .desktop-logo {
 	display: none;
@@ -1122,7 +1143,7 @@ body > .bg-gray-bar {
 	margin-top: 1em;
 }
 
-/* XXXXXX 6.2 Tablet Structure XXXXXX */
+/* XXXXXX 6.2 Laptop Structure XXXXXX */
 
 .wrapper {
 	width: 95%;
@@ -1158,7 +1179,7 @@ blockquote, blockquote.center {
 	width: 50%;
 }
 
-/* XXXXXX 6.3 Tablet Typography XXXXXX */
+/* XXXXXX 6.3 Laptop Typography XXXXXX */
 
 #contact h2 {
 	font-size: 2.25rem;
@@ -1168,15 +1189,49 @@ blockquote, blockquote.center {
 		width: 90%;
 }
 
-/* XXXXXX 6.4 Tablet Buttons XXXXXX */
+/* XXXXXX 6.4 Laptop Buttons XXXXXX */
+
+.tablet-logo-container > .main-nav-btn:hover {
+	border-bottom: none;
+}
+
+.main-nav-btn:after {
+	border-bottom: none;
+}
+
+/*This removes the border bottom
+from the top logo on laptop size */
+
+
+/* XXXXXX 6.5 Laptop Media XXXXXX */
+/* XXXXXX 6.6 Laptop Footer XXXXXX */
+
+}
+
+
+/* >>>>>> 7.0   T A B L E T  S I Z E  <<<<<< */
+
+@media (max-width: 768px) {
+
+/* XXXXXX 7.1 Tablet Header XXXXXX */
+/* XXXXXX 7.2 Tablet Structure XXXXXX */
+/* XXXXXX 7.3 Tablet Typography XXXXXX */
+
+h1 {
+  	font-size: 2rem;
+}
+
+/* XXXXXX 7.4 Tablet Buttons XXXXXX */
+
 
 .tablet-logo-container > .main-nav-btn:hover {
 	border-bottom: none;
 }/*This removes the border bottom
 from the top logo on tablet size */
 
-/* XXXXXX 6.5 Tablet Media XXXXXX */
-/* XXXXXX 6.6 Tablet Footer XXXXXX */
+
+/* XXXXXX 7.5 Tablet Media XXXXXX */
+/* XXXXXX 7.5 Tablet Footer XXXXXX */
 
 }
 
@@ -1190,11 +1245,16 @@ from the top logo on tablet size */
 
 
 
-/* >>>>>> 7.0   M O B I L E  S I Z E  <<<<<< */
+
+
+
+
+
+/* >>>>>> 8.0   M O B I L E  S I Z E  <<<<<< */
 
 @media (max-width: 480px) {
 
-/* XXXXXX 7.1 Mobile Header XXXXXX */
+/* XXXXXX 8.1 Mobile Header XXXXXX */
 
 header {
 	margin-bottom: 2rem;
@@ -1213,7 +1273,7 @@ header {
 	padding: 0;
 }
 
-/* XXXXXX 7.2 Mobile Structure XXXXXX */
+/* XXXXXX 8.2 Mobile Structure XXXXXX */
 
 section {
 	padding: 0;
@@ -1270,7 +1330,7 @@ td {
   	height: 200px;
 }
 
-/* XXXXXX 7.3 Mobile Typography XXXXXX */
+/* XXXXXX 8.3 Mobile Typography XXXXXX */
 
 h2 {
 	padding: 2rem 1rem 0;
@@ -1361,13 +1421,13 @@ p {
 }
 
 
-/* XXXXXX 7.4 Mobile Buttons XXXXXX */
+/* XXXXXX 8.4 Mobile Buttons XXXXXX */
 
 #contact .cta-btn {
 	margin-bottom: 3rem;
 }
 
-/* XXXXXX 7.5 Mobile Media XXXXXX */
+/* XXXXXX 8.5 Mobile Media XXXXXX */
 
 img {
 	margin: 0 auto;
@@ -1399,7 +1459,7 @@ img {
 }
 
 
-/* XXXXXX 7.6 Mobile Footer XXXXXX */
+/* XXXXXX 8.6 Mobile Footer XXXXXX */
 
 footer {
 	display: flex;
