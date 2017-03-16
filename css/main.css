@@ -85,8 +85,7 @@ h2 {
 }
 
 #hero h2 {
-  	margin-top: 2.5rem;
-  	margin-bottom: 4.5rem;
+  	margin: 2.5rem 0 4.5rem;
   	padding-left: 2rem;
 }
 
@@ -166,7 +165,7 @@ p {
   	padding: 2rem 7rem;
 }
 
-#hero p, #about p, #events p{
+#hero p, #about p, #events p {
 	padding: 1rem 1rem;
 }
 
@@ -194,7 +193,6 @@ blockquote.center {
 	text-align: left;
 	margin: 0 auto;
 	max-width: 68%;
-
 }
 
 .faq-item, .group-content {
@@ -202,7 +200,7 @@ blockquote.center {
 }
 
 .faq-item {
-		width: 60%;
+	width: 60%;
 }
 
 .group-content p {
@@ -227,26 +225,32 @@ blockquote.center {
 
 .cta-btn, 
 .faq-btn {
+	display: inline;
+	font: 300 1.75rem/4rem 'Cormorant Garamond', serif;
+	color: #7d494b;
+	font-style: italic;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.cta-btn:after, .faq-btn:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
 	display: block;
-	font-size: .75rem;
-	letter-spacing: 3px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.2s ease-out;
-    border-radius: 2px;
-    border-bottom: .25px solid #86332C;
-    max-width: 300px;
-    margin: 2rem auto 0 auto;
-    padding: 15px 45px 15px 45px;
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	background: #7d494b;
+	transition: width 0.7s ease 0s, left 0.7s ease 0s;
+	width: 0;
 }
 
-.cta-btn:hover {
-	background-color: #f6f3f3;
-}
-
-form .cta-btn:hover {
-	background-color: #fff;
+.cta-btn:hover:after, .faq-btn:hover:after {
+	width: 100%;
+	left: 0;
 }
 
 .main-nav-btn {
@@ -256,14 +260,38 @@ form .cta-btn:hover {
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
+	position: relative;
+	padding-bottom: 10px;
 }
 
-.main-nav-btn:hover {
-	border-bottom: 0.5px solid #000;
+.main-nav-btn:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 50%;
+	position: absolute;
+	background: #000;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
 }
 
-.desktop-logo a:hover {
-	border-bottom: none;
+.main-nav-btn:hover:after {
+	width: 100%;
+	left: 0;
+}
+
+.contact-btn {
+	text-decoration: none;
+}
+
+.logo-link {
+	text-decoration: none;
+}
+
+.logo-link:hover {
+	text-decoration: none;
 }
 
 .footer-nav-btn {
@@ -280,7 +308,8 @@ form .cta-btn:hover {
 
 .footer-logo-container a:hover {
 	border-bottom: none;
-}/* This removes the border from the logo */
+}/*This removes the border bottom
+from the bottom logo on large display */
 
 footer h6.right a {
 	text-transform: none;
@@ -337,7 +366,7 @@ form .cta-btn {
 #message {
   	background-color: #fff;
   	border-bottom: none;
-  	margin: 2px 0rem 55px 0rem;
+  	margin: 2px 0 55px;
 }
 
 #name {
@@ -357,7 +386,7 @@ form .cta-btn {
 
 #time-limit {
 	text-transform: none;
-	padding: 0px 100px 0 0;
+	padding: 0px 100px 0;
 }
 
 label {
@@ -385,7 +414,7 @@ input[type="text"], input[type="tel"], input[type="email"], textarea  {
 	padding: 10px;
 }
 
-select:focus, input:focus {
+select:focus, input:focus, textarea:focus {
 	outline: 0;
 }/* This removes the blue highlight when
 the dropdown menu is clicked */
@@ -455,9 +484,12 @@ table {
 	float: left;
 	line-height: 20px;
 	width: 50%;
-	padding-right: 20px;
-}
+	padding-left: 4rem !important;
+}/* !important is overriding html * padding */
 
+table:first-of-type {
+	padding-left: 0 !important;
+}/* !important is overriding html * padding */
 
 th {
   	font: 400 1rem 'Gibson', sans-serif;
@@ -469,16 +501,16 @@ th {
   	text-transform: uppercase;
   	padding-bottom: 10px !important;
   	border-bottom: 1px solid #7d494b !important;
-}
+}/* !important is overriding html * padding */
 
 td {
   	font: 100 1rem 'Gibson', sans-serif;
   	color: #000;
-  	padding: 7px 0;
-}
+  	padding: 1px 0 !important;
+}/* !important is overriding html * padding */
 
 .beverage-type {
-  	font: 100 1rem 'Cormorant Garamond', serif;
+  	font: 600 1rem 'Cormorant Garamond', serif;
   	color: #000;
   	letter-spacing: 4px;
   	text-align: left;
@@ -801,10 +833,10 @@ footer > div:last-of-type {
 	padding-right: 1rem;
 }
 
-.col-1-2 a {
+/*.col-1-2 a {
     text-decoration: none;
     color: #000000;
-}
+}*/
 
 /* XXXXXX 3.4 Event Cards XXXXXX */
 
@@ -939,9 +971,10 @@ body > .bg-gray-bar {
 
 #home-stamp {
 	position: absolute;
-	top: 61%;
-    left: 63%;
-	width: 35%;
+	top: 77%;
+    left: 70%;
+    mix-blend-mode: screen;
+	width: 55%;
 	min-width: 200px;
 }
 
@@ -1108,6 +1141,10 @@ body > .bg-gray-bar {
 	height: 600px;
 }
 
+.package-card {
+	width: 90%;
+}
+
 blockquote, blockquote.center {
 	font-size: 1.45rem;
 	letter-spacing: 0.73px;
@@ -1115,6 +1152,10 @@ blockquote, blockquote.center {
 	margin: 0;
 	padding: 5rem;
 	margin-top: 7rem;
+}
+
+#map {
+	width: 50%;
 }
 
 /* XXXXXX 6.3 Tablet Typography XXXXXX */
@@ -1128,6 +1169,12 @@ blockquote, blockquote.center {
 }
 
 /* XXXXXX 6.4 Tablet Buttons XXXXXX */
+
+.tablet-logo-container > .main-nav-btn:hover {
+	border-bottom: none;
+}/*This removes the border bottom
+from the top logo on tablet size */
+
 /* XXXXXX 6.5 Tablet Media XXXXXX */
 /* XXXXXX 6.6 Tablet Footer XXXXXX */
 
