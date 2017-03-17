@@ -360,9 +360,6 @@ footer h6.right a {
 
 
 form {
-	display: flex;
-	flex-direction: column;
-	width: 60%;
   	margin: 100px 0 4rem 0;
   	padding: 20px 30px;
 }
@@ -656,7 +653,6 @@ ul {
 }
 
 .wrapper {
-	overflow-x: hidden;
 	width: 75%;
 	margin: 0 auto;
 }
@@ -996,8 +992,8 @@ body > .bg-gray-bar {
 
 #home-stamp {
 	position: absolute;
-	top: 45%;
-    left: 0;
+	bottom: 0%;
+    right: 0%;
 	width: 45%;
 	min-width: 100px;
 	z-index: 10;
@@ -1035,7 +1031,7 @@ body > .bg-gray-bar {
 }/* This is the smaller wine glass image */
 
 #what-we-offer img {
-	margin-left: 5rem;
+	margin: 5rem 0 0 3rem;
 }/* This is moving the floor plan inwards */
 
 /* XXXXXX 4.1 Carousel XXXXXX */
@@ -1175,9 +1171,6 @@ blockquote, blockquote.center {
 	margin-top: 7rem;
 }
 
-#map {
-	width: 50%;
-}
 
 /* XXXXXX 6.3 Laptop Typography XXXXXX */
 
@@ -1218,9 +1211,7 @@ from the top logo on laptop size */
 .tablet-logo-container {
 	margin-bottom: 100px;
 }
-#hero>.row>.col-1-2:last-child {
-	width: 60%;
-}
+
 /* XXXXXX 7.3 Tablet Typography XXXXXX */
 
 h1 {
@@ -1237,14 +1228,6 @@ h2 {
 	padding: 0 2rem;
 }
 
-#hero .col-1-2.relative {
-    width: 30%;
-}
-
-.col-1-2 {
-    width: 45%;
-}
-
 /* XXXXXX 7.4 Tablet Buttons XXXXXX */
 
 
@@ -1257,7 +1240,6 @@ from the top logo on tablet size */
 /* XXXXXX 7.5 Tablet Media XXXXXX */
 
 #hero img.img-fullwidth {
-	width: 30vw;
 	min-width: 100px;
 }
 
