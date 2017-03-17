@@ -180,7 +180,7 @@ p {
 	padding: 1rem 1rem;
 }
 
-#hero p {
+#hero p, #about p {
 	background-color: white;
 	position: relative;
 }
@@ -996,10 +996,10 @@ body > .bg-gray-bar {
 
 #home-stamp {
 	position: absolute;
-	top: 77%;
-    left: 70%;
-	width: 55%;
-	min-width: 200px;
+	top: 45%;
+    left: 0;
+	width: 45%;
+	min-width: 100px;
 	z-index: 10;
 }
 
@@ -1211,14 +1211,38 @@ from the top logo on laptop size */
 
 /* >>>>>> 7.0   T A B L E T  S I Z E  <<<<<< */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
 /* XXXXXX 7.1 Tablet Header XXXXXX */
 /* XXXXXX 7.2 Tablet Structure XXXXXX */
+.tablet-logo-container {
+	margin-bottom: 100px;
+}
+#hero>.row>.col-1-2:last-child {
+	width: 60%;
+}
 /* XXXXXX 7.3 Tablet Typography XXXXXX */
 
 h1 {
   	font-size: 2rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+#about h2 {
+	background-color: #fff;
+	margin-bottom: 0rem;
+	padding: 0 2rem;
+}
+
+#hero .col-1-2.relative {
+    width: 30%;
+}
+
+.col-1-2 {
+    width: 45%;
 }
 
 /* XXXXXX 7.4 Tablet Buttons XXXXXX */
@@ -1231,6 +1255,16 @@ from the top logo on tablet size */
 
 
 /* XXXXXX 7.5 Tablet Media XXXXXX */
+
+#hero img.img-fullwidth {
+	width: 30vw;
+	min-width: 100px;
+}
+
+#about img:nth-of-type(2) {
+	display: none;
+}
+
 /* XXXXXX 7.5 Tablet Footer XXXXXX */
 
 }
@@ -1250,9 +1284,12 @@ from the top logo on tablet size */
 
 
 
+
+
+
 /* >>>>>> 8.0   M O B I L E  S I Z E  <<<<<< */
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
 /* XXXXXX 8.1 Mobile Header XXXXXX */
 
@@ -1297,6 +1334,10 @@ td {
 
 .col-1-2 {
 	width: 100%;
+	padding: 0;
+}
+.col-1-2.relative {
+	position: static;
 }
 
 .col-3-4 {
@@ -1304,7 +1345,8 @@ td {
 }
 
 .wrapper {
-	width: 100%;
+	min-width: 350px;
+	width: 97%
 }
 
 #what-we-offer {
@@ -1352,6 +1394,7 @@ h4 ~ p {
 
 #about h2, #events h2 {
 	font-size: 3rem;
+	background-color: #fff;
 	text-align: center;
 	letter-spacing: 2px;
 }
@@ -1378,10 +1421,13 @@ h4 ~ p {
 
 #what-we-offer h3 {
 	padding-left: 2rem;
+
 }
 
 #what-we-offer p {
 	text-align: left;
+	margin-left: 75px;
+	margin-bottom: 54px;
 }
 
 p {
@@ -1428,7 +1474,6 @@ p {
 }
 
 /* XXXXXX 8.5 Mobile Media XXXXXX */
-
 img {
 	margin: 0 auto;
 	width: 100%;
@@ -1456,6 +1501,9 @@ img {
 
  .packages-header:before {
  	display: none;
+}
+#hero .col-1-2.relative {
+	width: 100%;
 }
 
 
@@ -1490,8 +1538,7 @@ footer > div:last-of-type {
 	text-align: center;
 }
 
-#googleCalendarWrapper
-{
+#googleCalendarWrapper {
 	overflow:scroll;
 }
 
